@@ -5,6 +5,8 @@ These project have done during my undergraduate study.  It's only take record fo
 
 * 包括本科期间大一大二大三的所做的项目，本科期间所获得的奖项等类容，未特别申明项目，整个项目均为个人参与，不存在他人贡献，版权归作者自己，不存在抄袭哈。
 * 可能会问大三大四项目那么少，因为大四实习，都是公司机密，不透露了，哈哈
+* 申明一下，当年在学校我的软件比硬件墙，不要我没贴代码就说我是搞硬件的，虽然当时软硬都来，但是软件还是强点，哈哈。现在我在做什么，就不告诉了
+-------
 
 # 项目列表 
 
@@ -89,6 +91,7 @@ These project have done during my undergraduate study.  It's only take record fo
 第二个版本PCB：
 
 ![第二个版本PCB](./项目一刘师的矿下检测设备2015-6-20/dianlu1.JPG)
+
 [硬件地址](./项目一刘师的矿下检测设备2015-6-20/刘师PCB工程/)
 
 
