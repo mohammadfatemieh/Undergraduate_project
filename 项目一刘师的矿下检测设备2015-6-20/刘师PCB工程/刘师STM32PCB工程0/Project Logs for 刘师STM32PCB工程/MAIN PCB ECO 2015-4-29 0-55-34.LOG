@@ -1,0 +1,10 @@
+Change Component Designator: OldDesignator=R? NewDesignator=R27
+Change Component Designator: OldDesignator=R? NewDesignator=R28
+Change Component Designator: OldDesignator=R? NewDesignator=R29
+Added Member To Class: ClassName=U_刘师STM32 Member=Component R28 510
+Added Member To Class: ClassName=U_刘师STM32 Member=Component R29 510
+Added Room: Name=U_ht7111
+Added Room: Name=U_PL2303
+Added Room: Name=U_刘师STM32
+Added Room: Name=U_电源2
+Added Room: Name=U_电源

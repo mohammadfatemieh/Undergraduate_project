@@ -1,0 +1,199 @@
+Added Component: Designator=*1(chazhen2x1)
+Added Component: Designator=*2(chazhen2x1)
+Added Component: Designator=*3(feng)
+Added Component: Designator=*4(12WEN)
+Added Component: Designator=b1(NE555)
+Added Component: Designator=C1(CAPR5-4X5)
+Added Component: Designator=c2(NE555)
+Added Component: Designator=C3(CAPR5-4X5)
+Added Component: Designator=C4(CAPR5-4X5)
+Added Component: Designator=C5(CAPR5-4X5)
+Added Component: Designator=C6(CAPR5-4X5)
+Added Component: Designator=C7(CAPR5-4X5)
+Added Component: Designator=C8(CAPR5-4X5)
+Added Component: Designator=C9(CAPR5-4X5)
+Added Component: Designator=C10(CAPR5-4X5)
+Added Component: Designator=C11(CAPR5-4X5)
+Added Component: Designator=C12(CAPR5-4X5)
+Added Component: Designator=C13(CAPR5-4X5)
+Added Component: Designator=D1(res)
+Added Component: Designator=D2(res)
+Added Component: Designator=D3(res)
+Added Component: Designator=D4(res)
+Added Component: Designator=D5(res)
+Added Component: Designator=D6(res)
+Added Component: Designator=D7(res)
+Added Component: Designator=D8(res)
+Added Component: Designator=D9(res)
+Added Component: Designator=D10(res)
+Added Component: Designator=d11(chazhen2x1)
+Added Component: Designator=D12(res)
+Added Component: Designator=L1(0402-A)
+Added Component: Designator=L2(0402-A)
+Added Component: Designator=NE1(NE555)
+Added Component: Designator=R1(AXIAL-0.4)
+Added Component: Designator=R2(AXIAL-0.4)
+Added Component: Designator=R3(VR3)
+Added Component: Designator=R4(AXIAL-0.4)
+Added Component: Designator=R5(AXIAL-0.4)
+Added Component: Designator=R6(AXIAL-0.4)
+Added Component: Designator=R7(AXIAL-0.4)
+Added Component: Designator=R8(AXIAL-0.4)
+Added Component: Designator=R9(AXIAL-0.4)
+Added Component: Designator=R10(AXIAL-0.4)
+Added Component: Designator=R11(AXIAL-0.4)
+Added Component: Designator=R12(AXIAL-0.4)
+Added Component: Designator=RW1(VR3)
+Added Pin To Net: NetName=GND Pin=*1-1
+Added Pin To Net: NetName=Net*1_2 Pin=*1-2
+Added Pin To Net: NetName=Net*2_1 Pin=*2-1
+Added Pin To Net: NetName=GND Pin=*2-2
+Added Pin To Net: NetName=GND Pin=*3-1
+Added Pin To Net: NetName=Net*3_2 Pin=*3-2
+Added Pin To Net: NetName=VIN- Pin=*3-3
+Added Pin To Net: NetName=VIN Pin=*4-1
+Added Pin To Net: NetName=GND Pin=*4-2
+Added Pin To Net: NetName=Netb1_2 Pin=b1-2
+Added Pin To Net: NetName=Netb1_3 Pin=b1-3
+Added Pin To Net: NetName=Netb1_4 Pin=b1-4
+Added Pin To Net: NetName=Netb1_6 Pin=b1-6
+Added Pin To Net: NetName=Netb1_7 Pin=b1-7
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=Netc2_2 Pin=c2-2
+Added Pin To Net: NetName=Netc2_3 Pin=c2-3
+Added Pin To Net: NetName=Netc2_4 Pin=c2-4
+Added Pin To Net: NetName=Netc2_6 Pin=c2-6
+Added Pin To Net: NetName=Netc2_7 Pin=c2-7
+Added Pin To Net: NetName=NetC3_1 Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C3-2
+Added Pin To Net: NetName=NetC4_1 Pin=C4-1
+Added Pin To Net: NetName=NetC3_1 Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=Netc2_4 Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=Netc2_7 Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=NetC8_2 Pin=C8-2
+Added Pin To Net: NetName=NetC9_1 Pin=C9-1
+Added Pin To Net: NetName=NetC9_2 Pin=C9-2
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=Netb1_3 Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=Netb1_4 Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C12-1
+Added Pin To Net: NetName=NetC10_1 Pin=C12-2
+Added Pin To Net: NetName=Netb1_7 Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=NetC3_1 Pin=D1-1
+Added Pin To Net: NetName=Net*1_2 Pin=D1-2
+Added Pin To Net: NetName=Net*1_2 Pin=D2-1
+Added Pin To Net: NetName=NetC4_1 Pin=D2-2
+Added Pin To Net: NetName=VIN Pin=D3-1
+Added Pin To Net: NetName=Netc2_7 Pin=D3-2
+Added Pin To Net: NetName=Net*2_1 Pin=D4-1
+Added Pin To Net: NetName=NetC3_1 Pin=D4-2
+Added Pin To Net: NetName=NetC4_1 Pin=D5-1
+Added Pin To Net: NetName=Net*2_1 Pin=D5-2
+Added Pin To Net: NetName=VIN- Pin=D6-1
+Added Pin To Net: NetName=Netc2_4 Pin=D6-2
+Added Pin To Net: NetName=NetD7_1 Pin=D7-1
+Added Pin To Net: NetName=NetD7_2 Pin=D7-2
+Added Pin To Net: NetName=NetD8_1 Pin=D8-1
+Added Pin To Net: NetName=NetC8_2 Pin=D8-2
+Added Pin To Net: NetName=Net*3_2 Pin=D9-1
+Added Pin To Net: NetName=VIN Pin=D9-2
+Added Pin To Net: NetName=VIN Pin=D10-1
+Added Pin To Net: NetName=Netb1_7 Pin=D10-2
+Added Pin To Net: NetName=NetC9_2 Pin=d11-1
+Added Pin To Net: NetName=Netb1_4 Pin=D12-1
+Added Pin To Net: NetName=VIN- Pin=D12-2
+Added Pin To Net: NetName=NetC4_1 Pin=L1-1
+Added Pin To Net: NetName=NetC5_2 Pin=L1-2
+Added Pin To Net: NetName=GND Pin=L2-1
+Added Pin To Net: NetName=NetC3_1 Pin=L2-2
+Added Pin To Net: NetName=GND Pin=NE1-1
+Added Pin To Net: NetName=NetC8_2 Pin=NE1-2
+Added Pin To Net: NetName=VCC Pin=NE1-3
+Added Pin To Net: NetName=VCC Pin=NE1-4
+Added Pin To Net: NetName=NetC1_1 Pin=NE1-5
+Added Pin To Net: NetName=NetC8_2 Pin=NE1-6
+Added Pin To Net: NetName=NetD8_1 Pin=NE1-7
+Added Pin To Net: NetName=VCC Pin=NE1-8
+Added Pin To Net: NetName=Netc2_2 Pin=R1-1
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR2_1 Pin=R2-1
+Added Pin To Net: NetName=VCC Pin=R2-2
+Added Pin To Net: NetName=NetR2_1 Pin=R3-1
+Added Pin To Net: NetName=NetD7_2 Pin=R3-2
+Added Pin To Net: NetName=NetD8_1 Pin=R3-3
+Added Pin To Net: NetName=Netc2_6 Pin=R4-1
+Added Pin To Net: NetName=NetR1_2 Pin=R4-2
+Added Pin To Net: NetName=NetR5_1 Pin=R5-1
+Added Pin To Net: NetName=Netc2_2 Pin=R5-2
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=Netc2_3 Pin=R6-2
+Added Pin To Net: NetName=NetC8_2 Pin=R7-1
+Added Pin To Net: NetName=NetD7_1 Pin=R7-2
+Added Pin To Net: NetName=NetR1_2 Pin=R8-1
+Added Pin To Net: NetName=NetC9_1 Pin=R8-2
+Added Pin To Net: NetName=NetC9_2 Pin=R9-1
+Added Pin To Net: NetName=Netb1_2 Pin=R9-2
+Added Pin To Net: NetName=NetC9_2 Pin=R10-1
+Added Pin To Net: NetName=Netb1_6 Pin=R10-2
+Added Pin To Net: NetName=Netb1_2 Pin=R11-1
+Added Pin To Net: NetName=GND Pin=R11-2
+Added Pin To Net: NetName=Netb1_3 Pin=R12-1
+Added Pin To Net: NetName=NetC9_1 Pin=R12-2
+Added Pin To Net: NetName=NetC5_2 Pin=RW1-1
+Added Pin To Net: NetName=GND Pin=RW1-2
+Added Pin To Net: NetName=NetR5_1 Pin=RW1-3
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component *1 chazhn2x1
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component *2 chazhn2x1
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component *3 jiekou
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component *4 12EN
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component b1 HA17741
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C1 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component c2 HA17741
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C3 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C4 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C5 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C6 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C7 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C8 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C9 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C10 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C11 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C12 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C13 Cap2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D1 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D2 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D3 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D4 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D5 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D6 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D7 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D8 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D9 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D10 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component d11 chazhn2x1
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D12 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component L1 Inductor
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component L2 Inductor
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component NE1 555
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R1 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R2 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R3 Res Tap
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R4 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R5 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R6 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R7 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R8 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R9 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R10 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R11 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R12 Res2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component RW1 
+Added Room: Name=PVCπ‹ºÏ≤‚Õº

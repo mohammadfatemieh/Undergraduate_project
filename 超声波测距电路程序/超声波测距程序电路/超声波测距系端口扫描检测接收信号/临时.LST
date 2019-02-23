@@ -1,0 +1,570 @@
+C51 COMPILER V9.53.0.0   ____                                                              03/09/2015 17:44:12 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE ____
+OBJECT MODULE PLACED IN ÁÙÊ±.OBJ
+COMPILER INVOKED BY: D:\Program Files (x86)\Keil_v5\C51\BIN\C51.EXE ÁÙÊ±.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND T
+                    -ABS(2)
+
+line level    source
+
+   1          #include<AT89X51.H>
+   2          #include<intrins.h>
+   3          #include<stdio.h>
+   4          #define uchar unsigned char
+   5          #define uint unsigned int
+   6          #define nop _nop_()
+   7          #define LCD_Data P2
+   8          #define Busy    0x80 //ÓÃÓÚ¼ì²âLCD×´Ì¬×ÖÖÐµÄBusy±êÊ¶
+   9          
+  10          sbit csb1=P1^0;//tr 40KHz³¬Éù²¨·¢Éä½Å
+  11          sbit in1=P1^1;
+  12          
+  13          sbit csb2=P1^2;
+  14          sbit in2=P1^3;
+  15          
+  16          sbit  csb3=P1^4;
+  17          sbit  in3=P1^5;
+  18          
+  19          sbit  csb4=P1^6;
+  20          sbit  in4=P1^7;
+  21          
+  22          
+  23          sbit LCD_RS=P0^7;//¶¨ÒåÒý½Å
+  24          sbit LCD_RW=P0^6;
+  25          sbit LCD_E=P0^5;
+  26          //sbit PSB =P3^7;   
+  27          sbit PSB =P0^4;   //PSB½ÅÎª12864-12ÏµÁÐµÄ´®¡¢²¢Í¨Ñ¶¹¦ÄÜÇÐ»»£¬ÎÒÃÇÊ¹ÓÃ8Î»²¢ÐÐ½Ó¿Ú£¬PSB=1
+  28          sbit beef =P0^3;
+  29          /*************************///LCDÏÔÊ¾×Ö·ûº¯Êý
+  30          void WriteDataLCD(unsigned char WDLCD);
+  31          void WriteCommandLCD(unsigned char WCLCD,BuysC);
+  32          unsigned char ReadDataLCD(void);
+  33          unsigned char ReadStatusLCD(void);
+  34          void LCDInit(void);
+  35          void LCDClear(void);
+  36          //void LCDFlash(void);
+  37          void DisplayOneChar(unsigned char X, unsigned char Y, unsigned char DData);
+  38          void DisplayListChar(unsigned char X, unsigned char Y, unsigned char code *DData);
+  39          //void DisplayImage (unsigned char code *DData);
+  40          void Delay5Ms(void);
+  41          void Delay400Ms(void);
+  42          /*************************/
+  43          /////////////////////////////³¬Éù²¨·¢Éä½ÓÊÕ×Óº¯ÊýÌå
+  44          
+  45          void  delay100us();
+  46          void delay_nms(uint n);
+  47          void tran1(void);
+  48          void tran2(void);
+  49          void tran3(void);
+  50          void tran4(void);
+  51          void display(uint dat);
+  52          /**************************/
+  53          unsigned char  shuju[5];//////////////////////////////×Ö·û¶¨Òå£»
+  54          unsigned char  shuju_send[5];
+C51 COMPILER V9.53.0.0   ____                                                              03/09/2015 17:44:12 PAGE 2   
+
+  55          ////////////////////////////////////////////////³¬Éù²¨·¢Éä½ÓÊÕÈ«¾Ö±äÁ¿
+  56          unsigned char flag;
+  57          unsigned int tmp,dis,high_time ,low_time;
+  58          ///////////////////////////////////////////////
+  59          
+  60          void serial_init(void)
+  61          {
+  62   1          TMOD=0X20;//·½Ê½2×Ô¶¯ÖØ×°
+  63   1          TH1=0XFD;
+  64   1          TL1=0XFD;
+  65   1          TR1=1;//Æô¶¯¼ÆÊý/¶¨Ê±
+  66   1          SCON=0X50;//  SM0=0;SM1=1;SM2=0;REN=1;//10Î»Òì²½Í¨Ñ¶·½Ê½1//RENÎª1¿ªÊ¼½ÓÊÕ£¬Îª0Í£Ö¹½ÓÊÕ
+  67   1          EA=0;
+  68   1      //    TR1=0;//¶¨Ê±Æ÷²»ÄÜ¹Ø
+  69   1          
+  70   1      }
+  71          
+  72          //´®¿Ú·¢ËÍÊ±ÊÇ²»ÐèÒª´®¿ÚÖÐ¶Ï²ÎÓëµÄ£¬¶ø´®¿Ú½ÓÊÕÊý¾ÝÊ±ÔòÐèÒª´®¿ÚÖÐ¶Ï²ÎÓë£»
+  73          
+  74          
+  75          void serial_send(void)
+  76          {
+  77   1            unsigned char i;
+  78   1      //    EA=0;
+  79   1      //    TR1=0;//¶¨Ê±Æ÷²»ÄÜ¹Ø
+  80   1      //delay_ms(20);
+  81   1      //TR1=1;//¼´Ê¹¹ØµôÁËÒ²ÒªÏë°ì·¨´ò¿ªÔÚ·¢ËÍÊý¾ÝÖ®Ç°
+  82   1          for(i=0;i<6;i++)
+  83   1            {
+  84   2              SBUF=shuju_send[i];
+  85   2      //        while(!TI);//µÈ´ý·¢ËÍÊý¾ÝÍê³É
+  86   2              Delay400Ms();
+  87   2      //        Delay400Ms();
+  88   2              TI=0;
+  89   2            }
+  90   1      
+  91   1      }
+  92          
+  93          /////////////////////////////////////////////////Ö÷³ÌÐòº¯Êý
+  94          void main(void)
+  95          {
+  96   1      //  PT1=1;
+  97   1      //  serial_init();
+  98   1        Delay400Ms(); //Æô¶¯µÈ´ý£¬µÈLCD½²Èë¹¤×÷×´Ì¬
+  99   1       LCDInit(); //LCM³õÊ¼»¯
+ 100   1       Delay5Ms(); //ÑÓÊ±Æ¬¿Ì(¿É²»Òª)
+ 101   1      //  PT0=0;
+ 102   1      
+ 103   1        while(1)
+ 104   1        {
+ 105   2      //    uint i;
+ 106   2            
+ 107   2              tran1( );   
+ 108   2      
+ 109   2              tran2( ); 
+ 110   2      ////        serial_send();        
+ 111   2              Delay400Ms();
+ 112   2      ////        Delay400Ms();//Í¨¹ýÑÓÊ±·ÀÖ¹Òòcsb1½ÓÊÕÒýÆðÖÐ¶Ï 
+ 113   2              tran3( );     
+ 114   2      //        serial_send();        
+ 115   2              Delay400Ms();
+ 116   2      ////        Delay400Ms();//Í¨¹ýÑÓÊ±·ÀÖ¹Òòcsb1½ÓÊÕÒýÆðÖÐ¶Ï 
+C51 COMPILER V9.53.0.0   ____                                                              03/09/2015 17:44:12 PAGE 3   
+
+ 117   2              tran4( );   
+ 118   2      //        serial_send();        
+ 119   2              Delay400Ms();
+ 120   2              Delay400Ms();   
+ 121   2      //        Delay400Ms();
+ 122   2      //        Delay400Ms();//Í¨¹ýÑÓÊ±·ÀÖ¹Òòcsb1½ÓÊÕÒýÆðÖÐ¶Ï 
+ 123   2      //    LCDClear();//ÇåÆÁ
+ 124   2      //    Delay400Ms();
+ 125   2      //    LCDClear();
+ 126   2      
+ 127   2        }
+ 128   1      }
+ 129          ////////////////////////////////////////////////////
+ 130          
+ 131          //ÑÓÊ±º¯ÊýÌå
+ 132          void  delay100us()
+ 133          {
+ 134   1          uchar i;
+ 135   1              for(i=0;i<50;i++)
+ 136   1                  ;
+ 137   1      }
+ 138          void delay_nms(uint n)
+ 139          {
+ 140   1      uchar i; 
+ 141   1      while(n--)
+ 142   1      {
+ 143   2      for(i=123;i>0;i--);
+ 144   2      }
+ 145   1      }
+ 146          //////³¬Éù²¨·¢Éä³ÌÐò
+ 147          void tran1(void)///¿ÉÍ¨¹ýÉèÖÃKÊýÖµÑ¡ÔñÖ´ÐÐÏàÓ¦µÄI0·¢Éä³¬Éù²¨
+ 148          {
+ 149   1                uchar i;
+ 150   1                float temp;
+ 151   1                  TMOD=0XF0;
+ 152   1                  TMOD |=0X01;
+ 153   1                  TL0=0X47;
+ 154   1                  TH0=0XFF;
+ 155   1                  TR0=0;
+ 156   1                  ET0=0;//¹Ø±Õtimme0ÖÐ¶Ï£
+ 157   1                  csb1=1;
+ 158   1                  nop;
+ 159   1                  nop;
+ 160   1                  nop;
+ 161   1                  nop;
+ 162   1                  nop;
+ 163   1                  nop;
+ 164   1                  nop;
+ 165   1                  nop;
+ 166   1                  nop;
+ 167   1                  nop;
+ 168   1                  nop;
+ 169   1                  nop;
+ 170   1                  nop;
+ 171   1      
+ 172   1                          csb1=0;
+ 173   1                          TR0=0;
+ 174   1                          TH0=0;
+ 175   1                          TL0=0;
+ 176   1                            
+ 177   1                    while(in1==0);
+ 178   1                    TR0=1;
+C51 COMPILER V9.53.0.0   ____                                                              03/09/2015 17:44:12 PAGE 4   
+
+ 179   1                    while(in1==1);
+ 180   1                    TR0=0;    
+ 181   1                              temp=(TH0*256+TL0)*1.08/58;   //1.08Îª·ÖÆµÖ®ºóµÄÊý
+ 182   1                              //·äÃùÆ÷Ïì
+ 183   1                    if(temp<20)beef=0;
+ 184   1                          delay_nms(60);
+ 185   1                                beef=1;
+ 186   1                                //
+ 187   1                    if(temp>4000)temp=4000;
+ 188   1                              dis =(unsigned int)temp;//dis½«Ö±½ÓÓÃÓÚÏÔÊ¾º¯Êý
+ 189   1                      delay_nms(60);
+ 190   1                      display(dis);
+ 191   1                      for(i=0;i<6;i++)
+ 192   1                      {
+ 193   2                          DisplayOneChar(i,1,shuju[i]); //ÏÔÊ¾×Ö¿âÖÐµÄÖÐÎÄÊý×Ó
+ 194   2                      }
+ 195   1                      serial_init();
+ 196   1                      
+ 197   1                      serial_send();
+ 198   1                      
+ 199   1      }
+ 200          
+ 201          void tran2(void)///¿ÉÍ¨¹ýÉèÖÃKÊýÖµÑ¡ÔñÖ´ÐÐÏàÓ¦µÄI0·¢Éä³¬Éù²¨
+ 202          {
+ 203   1                uchar i;
+ 204   1                float temp;
+ 205   1                  TMOD=0XF0;
+ 206   1                  TMOD |=0X01;
+ 207   1                  TL0=0X47;
+ 208   1                  TH0=0XFF;
+ 209   1                  TR0=0;
+ 210   1                  ET0=0;//¹Ø±Õtimme0ÖÐ¶Ï£
+ 211   1                  csb2=1;
+ 212   1                  nop;
+ 213   1                  nop;
+ 214   1                  nop;
+ 215   1                  nop;
+ 216   1                  nop;
+ 217   1                  nop;
+ 218   1                  nop;
+ 219   1                  nop;
+ 220   1                  nop;
+ 221   1                  nop;
+ 222   1                  nop;
+ 223   1                  nop;
+ 224   1                  nop;
+ 225   1      
+ 226   1                          csb2=0;
+ 227   1                          TR0=0;
+ 228   1                          TH0=0;
+ 229   1                          TL0=0;
+ 230   1                            
+ 231   1                    while(in2==0);
+ 232   1                    TR0=1;
+ 233   1                    while(in2==1);
+ 234   1                    TR0=0;    
+ 235   1                              temp=(TH0*256+TL0)*1.08/58;   //1.08Îª·ÖÆµÖ®ºóµÄÊý
+ 236   1                              //·äÃùÆ÷Ïì
+ 237   1                    if(temp<20)beef=0;
+ 238   1                          delay_nms(60);
+ 239   1                                beef=1;
+ 240   1                                //                        
+C51 COMPILER V9.53.0.0   ____                                                              03/09/2015 17:44:12 PAGE 5   
+
+ 241   1                    if(temp>4000)temp=4000;
+ 242   1                              dis =(unsigned int)temp;//dis½«Ö±½ÓÓÃÓÚÏÔÊ¾º¯Êý
+ 243   1                      delay_nms(60);
+ 244   1                      display(dis);
+ 245   1                      shuju[0]=shuju[0]+1;
+ 246   1                      for(i=0;i<6;i++)
+ 247   1                      DisplayOneChar(i,2,shuju[i]); //ÏÔÊ¾×Ö¿âÖÐµÄÖÐÎÄÊý×Ó
+ 248   1                      shuju_send[0]=shuju_send[0]+1;
+ 249   1                      serial_init();
+ 250   1                      serial_send();
+ 251   1                      
+ 252   1      }
+ 253          void tran3(void)///¿ÉÍ¨¹ýÉèÖÃKÊýÖµÑ¡ÔñÖ´ÐÐÏàÓ¦µÄI0·¢Éä³¬Éù²¨
+ 254          {
+ 255   1                uchar i;
+ 256   1                float temp;
+ 257   1                  TMOD=0XF0;
+ 258   1                  TMOD |=0X01;
+ 259   1                  TL0=0X47;
+ 260   1                  TH0=0XFF;
+ 261   1                  TR0=0;
+ 262   1                  ET0=0;//¹Ø±Õtimme0ÖÐ¶Ï£
+ 263   1                  csb3=1;
+ 264   1                  nop;
+ 265   1                  nop;
+ 266   1                  nop;
+ 267   1                  nop;
+ 268   1                  nop;
+ 269   1                  nop;
+ 270   1                  nop;
+ 271   1                  nop;
+ 272   1                  nop;
+ 273   1                  nop;
+ 274   1                  nop;
+ 275   1                  nop;
+ 276   1                  nop;
+ 277   1      
+ 278   1                          csb3=0;
+ 279   1                          TR0=0;
+ 280   1                          TH0=0;
+ 281   1                          TL0=0;
+ 282   1                            
+ 283   1                    while(in3==0);
+ 284   1                    TR0=1;
+ 285   1                    while(in3==1);
+ 286   1                    TR0=0;    
+ 287   1                              temp=(TH0*256+TL0)*1.08/58;   //1.08Îª·ÖÆµÖ®ºóµÄÊý
+ 288   1                              //·äÃùÆ÷Ïì
+ 289   1                    if(temp<20)beef=0;
+ 290   1                          delay_nms(60);
+ 291   1                                beef=1;
+ 292   1                                //                        
+ 293   1                    if(temp>4000)temp=4000;
+ 294   1                              dis =(unsigned int)temp;//dis½«Ö±½ÓÓÃÓÚÏÔÊ¾º¯Êý
+ 295   1                      delay_nms(60);
+ 296   1                      display(dis);
+ 297   1                      shuju[0]=shuju[0]+2;
+ 298   1                      for(i=0;i<6;i++)
+ 299   1                      DisplayOneChar(i,3,shuju[i]); //ÏÔÊ¾×Ö¿âÖÐµÄÖÐÎÄÊý×Ó
+ 300   1                      shuju_send[0]=shuju_send[0]+2;
+ 301   1                      serial_init();
+ 302   1                      serial_send();
+C51 COMPILER V9.53.0.0   ____                                                              03/09/2015 17:44:12 PAGE 6   
+
+ 303   1      //                
+ 304   1                      
+ 305   1      }
+ 306          void tran4(void)///¿ÉÍ¨¹ýÉèÖÃKÊýÖµÑ¡ÔñÖ´ÐÐÏàÓ¦µÄI0·¢Éä³¬Éù²¨
+ 307          {
+ 308   1                uchar i;
+ 309   1                float temp;
+ 310   1                  TMOD=0XF0;
+ 311   1                  TMOD |=0X01;
+ 312   1                  TL0=0X47;
+ 313   1                  TH0=0XFF;
+ 314   1                  TR0=0;
+ 315   1                  ET0=0;//¹Ø±Õtimme0ÖÐ¶Ï£
+ 316   1                  csb4=1;
+ 317   1                  nop;
+ 318   1                  nop;
+ 319   1                  nop;
+ 320   1                  nop;
+ 321   1                  nop;
+ 322   1                  nop;
+ 323   1                  nop;
+ 324   1                  nop;
+ 325   1                  nop;
+ 326   1                  nop;
+ 327   1                  nop;
+ 328   1                  nop;
+ 329   1                  nop;
+ 330   1      
+ 331   1                          csb4=0;
+ 332   1                          TR0=0;
+ 333   1                          TH0=0;
+ 334   1                          TL0=0;
+ 335   1                            
+ 336   1                    while(in4==0);
+ 337   1                    TR0=1;
+ 338   1                    while(in4==1);
+ 339   1                    TR0=0;    
+ 340   1                              temp=(TH0*256+TL0)*1.08/58;   //1.08Îª·ÖÆµÖ®ºóµÄÊý
+ 341   1                              //·äÃùÆ÷Ïì
+ 342   1                    if(temp<20)beef=0;
+ 343   1                          delay_nms(60);
+ 344   1                                beef=1;
+ 345   1                                //                        
+ 346   1                    if(temp>4000)temp=4000;
+ 347   1                              dis =(unsigned int)temp;//dis½«Ö±½ÓÓÃÓÚÏÔÊ¾º¯Êý
+ 348   1                      delay_nms(60);
+ 349   1                      display(dis);
+ 350   1                      shuju[0]=shuju[0]+3;
+ 351   1                      for(i=0;i<6;i++)
+ 352   1                      DisplayOneChar(i,4,shuju[i]); //ÏÔÊ¾×Ö¿âÖÐµÄÖÐÎÄÊý×Ó
+ 353   1                      shuju_send[0]=shuju_send[0]+3;
+ 354   1                      serial_init();
+ 355   1                      serial_send();
+ 356   1                      
+ 357   1                      
+ 358   1      }
+ 359          ///////////////////////////////////
+ 360          void display(uint dat)
+ 361          {
+ 362   1      
+ 363   1          uchar i,j,k;//¶¨Òå±äÁ¿
+ 364   1          i=dat/100;//°×
+C51 COMPILER V9.53.0.0   ____                                                              03/09/2015 17:44:12 PAGE 7   
+
+ 365   1          j=dat%100/10;//Ê®Î»
+ 366   1          k=dat%100%10;//¸ö 
+ 367   1          
+ 368   1      //    serial_char(i);
+ 369   1      //    delay_nms(40);
+ 370   1      //    serial_char(j);
+ 371   1      //    delay_nms(40);
+ 372   1      //    serial_char(k);
+ 373   1      //    delay_nms(40);
+ 374   1          shuju_send[0]=65;
+ 375   1          shuju_send[1]=i+48;
+ 376   1          shuju_send[2]='.';
+ 377   1          shuju_send[3]=j+48;
+ 378   1          shuju_send[4]=k+48;
+ 379   1          shuju_send[5]=109;
+ 380   1          
+ 381   1          shuju[0]=65;
+ 382   1          shuju[1]=i+48;
+ 383   1          shuju[2]='.';
+ 384   1          shuju[3]=j+48;
+ 385   1          shuju[4]=k+48;
+ 386   1          shuju[5]=109;//»òÕßshuju[4]='m'£»
+ 387   1      }
+ 388          
+ 389          
+ 390          
+ 391          ////////////////////////////////////////////
+ 392          //1Ð´Êý¾Ý
+ 393          void WriteDataLCD(unsigned char WDLCD)
+ 394          {
+ 395   1       ReadStatusLCD(); //¼ì²âÃ¦ 
+ 396   1       LCD_RS = 1;
+ 397   1       LCD_RW = 0;
+ 398   1       LCD_Data = WDLCD;
+ 399   1       LCD_E = 1;
+ 400   1       LCD_E = 1;
+ 401   1       LCD_E = 1;
+ 402   1       LCD_E = 0;
+ 403   1      }
+ 404          
+ 405          //2Ð´Ö¸Áî
+ 406          void WriteCommandLCD(unsigned char WCLCD,BuysC) //BuysCÎª0Ê±ºöÂÔÃ¦¼ì²â
+ 407          {
+ 408   1       if (BuysC) ReadStatusLCD(); //¸ù¾ÝÐèÒª¼ì²âÃ¦ 
+ 409   1       LCD_RS = 0;
+ 410   1       LCD_RW = 0; 
+ 411   1       LCD_Data = WCLCD;
+ 412   1       LCD_E = 1; 
+ 413   1       LCD_E = 1;
+ 414   1       LCD_E = 1;
+ 415   1       LCD_E = 0;  
+ 416   1      }
+ 417          
+ 418          //3¶ÁÊý¾Ý
+ 419          unsigned char ReadDataLCD(void)
+ 420          {
+ 421   1       LCD_RS = 1; 
+ 422   1       LCD_RW = 1;
+ 423   1       LCD_E = 0;
+ 424   1       LCD_E = 0;
+ 425   1       LCD_E = 1;
+ 426   1       return(LCD_Data);
+C51 COMPILER V9.53.0.0   ____                                                              03/09/2015 17:44:12 PAGE 8   
+
+ 427   1      }
+ 428          
+ 429          //4¶Á×´Ì¬
+ 430          unsigned char ReadStatusLCD(void)
+ 431          {
+ 432   1       LCD_Data = 0xFF; 
+ 433   1       LCD_RS = 0;
+ 434   1       LCD_RW = 1; 
+ 435   1       LCD_E = 1;
+ 436   1       while (LCD_Data & Busy); //¼ì²âÃ¦ÐÅºÅ
+ 437   1       LCD_E = 0;
+ 438   1       return(LCD_Data);
+ 439   1      }
+ 440          
+ 441          void LCDInit(void) //5LCM³õÊ¼»¯
+ 442          {
+ 443   1       WriteCommandLCD(0x30,1); //ÏÔÊ¾Ä£Ê½ÉèÖÃ,¿ªÊ¼ÒªÇóÃ¿´Î¼ì²âÃ¦ÐÅºÅ
+ 444   1       WriteCommandLCD(0x01,1); //ÏÔÊ¾ÇåÆÁ
+ 445   1       WriteCommandLCD(0x06,1); // ÏÔÊ¾¹â±êÒÆ¶¯ÉèÖÃ
+ 446   1       WriteCommandLCD(0x0C,1); // ÏÔÊ¾¿ª¼°¹â±êÉèÖÃ
+ 447   1      }
+ 448          void LCDClear(void) //6ÇåÆÁ
+ 449          {
+ 450   1       WriteCommandLCD(0x01,1); //ÏÔÊ¾ÇåÆÁ
+ 451   1       WriteCommandLCD(0x34,1); // ÏÔÊ¾¹â±êÒÆ¶¯ÉèÖÃ
+ 452   1       WriteCommandLCD(0x30,1); // ÏÔÊ¾¿ª¼°¹â±êÉèÖÃ
+ 453   1      }
+ 454          
+ 455          void DisplayOneChar(unsigned char X, unsigned char Y, unsigned char DData)
+ 456          {
+ 457   1       if(Y<1)
+ 458   1        Y=1;
+ 459   1       if(Y>4)
+ 460   1        Y=4;
+ 461   1       X &= 0x0F; //ÏÞÖÆX²»ÄÜ´óÓÚ16£¬Y²»ÄÜ´óÓÚ1
+ 462   1       switch(Y){
+ 463   2        case 1:X|=0X80;break;
+ 464   2        case 2:X|=0X90;break;
+ 465   2        case 3:X|=0X88;break;
+ 466   2        case 4:X|=0X98;break;
+ 467   2        }
+ 468   1       WriteCommandLCD(X, 0); //ÕâÀï²»¼ì²âÃ¦ÐÅºÅ£¬·¢ËÍµØÖ·Âë
+ 469   1       WriteDataLCD(DData);
+ 470   1      }
+ 471          
+ 472          //9°´Ö¸¶¨Î»ÖÃÏÔÊ¾Ò»´®×Ö·û
+ 473          void DisplayListChar(unsigned char X, unsigned char Y, unsigned char code *DData)
+ 474          {
+ 475   1       unsigned char ListLength,X2;
+ 476   1        ListLength = 0;
+ 477   1        X2=X;
+ 478   1       if(Y<1)
+ 479   1        Y=1;
+ 480   1       if(Y>4)
+ 481   1        Y=4;
+ 482   1       X &= 0x0F; //ÏÞÖÆX²»ÄÜ´óÓÚ16£¬YÔÚ1-4Ö®ÄÚ
+ 483   1       switch(Y){
+ 484   2        case 1:X2|=0X80;break;  //¸ù¾ÝÐÐÊýÀ´Ñ¡ÔñÏàÓ¦µØÖ·
+ 485   2        case 2:X2|=0X90;break;
+ 486   2        case 3:X2|=0X88;break;
+ 487   2        case 4:X2|=0X98;break;
+ 488   2        }
+C51 COMPILER V9.53.0.0   ____                                                              03/09/2015 17:44:12 PAGE 9   
+
+ 489   1       WriteCommandLCD(X2, 1); //10·¢ËÍµØÖ·Âë
+ 490   1        while (DData[ListLength]>=0x20) //Èôµ½´ï×Ö´®Î²ÔòÍË³ö
+ 491   1        {
+ 492   2         if (X <= 0x0F) //X×ø±êÓ¦Ð¡ÓÚ0xF
+ 493   2          {
+ 494   3           WriteDataLCD(DData[ListLength]); //
+ 495   3           ListLength++;
+ 496   3         X++;
+ 497   3         Delay5Ms();
+ 498   3          }
+ 499   2        }
+ 500   1      }
+ 501          //125msÑÓÊ±
+ 502          void Delay5Ms(void)
+ 503          {
+ 504   1       unsigned int TempCyc = 5552;
+ 505   1       while(TempCyc--);
+ 506   1      }
+ 507          
+ 508          //13400msÑÓÊ±
+ 509          void Delay400Ms(void)
+ 510          {
+ 511   1       unsigned char TempCycA = 5;
+ 512   1       unsigned int TempCycB;
+ 513   1       while(TempCycA--)
+ 514   1       {
+ 515   2        TempCycB=7269;
+ 516   2        while(TempCycB--);
+ 517   2       };
+ 518   1      }
+ 519          /////////////////////////////////////
+ 520          
+ 521          
+ 522          
+ 523          
+ 524          
+ 525          
+ 526          
+ 527          
+ 528          
+ 529          
+ 530          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1406    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     19      30
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

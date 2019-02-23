@@ -1,0 +1,6 @@
+Added Component: Designator=usb(USB-DIP)
+Added Pin To Net: NetName=VCC Pin=usb-1
+Added Pin To Net: NetName=GND Pin=usb-4
+Change Class Name : Old Net Name=Sheet1 New Net Name=超声波系统
+Added Member To Class: ClassName=超声波系统 Member=Component usb USB-dip
+Added Room: Name=超声波系统

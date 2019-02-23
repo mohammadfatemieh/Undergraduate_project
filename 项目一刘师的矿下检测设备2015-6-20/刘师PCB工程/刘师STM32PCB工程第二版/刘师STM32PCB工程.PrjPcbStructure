@@ -1,0 +1,5 @@
+Record=TopLevelDocument|FileName=main.SchDoc
+Record=SheetSymbol|Record=SheetSymbol|SourceDocument=main.SchDoc|Designator=U_ht7111|SchDesignator=U_ht7111|FileName=ht7111.SchDoc|SymbolType=Normal|RawFileName=ht7111.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|Record=SheetSymbol|SourceDocument=main.SchDoc|Designator=U_刘师STM32|SchDesignator=U_刘师STM32|FileName=刘师STM32.SchDoc|SymbolType=Normal|RawFileName=刘师STM32.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|Record=SheetSymbol|SourceDocument=main.SchDoc|Designator=U_电源|SchDesignator=U_电源|FileName=电源.SchDoc|SymbolType=Normal|RawFileName=电源.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|Record=SheetSymbol|SourceDocument=main.SchDoc|Designator=U_电源2|SchDesignator=U_电源2|FileName=电源2.SchDoc|SymbolType=Normal|RawFileName=电源2.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

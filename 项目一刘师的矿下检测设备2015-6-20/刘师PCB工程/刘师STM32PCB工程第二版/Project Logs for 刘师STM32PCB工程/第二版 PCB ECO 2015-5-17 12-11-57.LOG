@@ -1,0 +1,21 @@
+Added Component: Designator=BEEF1(FMQ)
+Added Component: Designator=Q2(S8550)
+Added Component: Designator=Rfm(8050)
+Added Pin To Net: NetName=VCC5 Pin=BEEF1-2
+Added Pin To Net: NetName=GND Pin=Q2-3
+Added Pin To Net: NetName=FMQ Pin=Rfm-2
+Added Pin To Net: NetName=FMQ Pin=U2-16
+Added Net: Name=FMQ
+Added Pin To Net: NetName=NetBEEF1_1 Pin=BEEF1-1
+Added Pin To Net: NetName=NetBEEF1_1 Pin=Q2-1
+Added Net: Name=NetBEEF1_1
+Added Pin To Net: NetName=NetQ2_2 Pin=Q2-2
+Added Pin To Net: NetName=NetQ2_2 Pin=Rfm-1
+Added Net: Name=NetQ2_2
+Added Member To Class: ClassName=U_刘师STM32 Member=Component BEEF1 FMQ1
+Added Member To Class: ClassName=U_刘师STM32 Member=Component Q2 S855X
+Added Member To Class: ClassName=U_刘师STM32 Member=Component Rfm 4.7K
+Added Room: Name=U_ht7111
+Added Room: Name=U_刘师STM32
+Added Room: Name=U_电源2
+Added Room: Name=U_电源

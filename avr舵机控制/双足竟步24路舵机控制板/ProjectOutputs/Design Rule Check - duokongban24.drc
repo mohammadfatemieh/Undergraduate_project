@@ -1,0 +1,26 @@
+Protel Design System Design Rule Check
+PCB File : E:\制作项目\双足竟步24路舵机控制板\duokongban24.PcbDoc
+Date     : 2010-5-25
+Time     : 下午 02:54:11
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=118.11mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=50mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:00

@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=TX3 Pin=51MCU-23
+Removed Pin From Net: NetName=RX3 Pin=51MCU-24
+Added Pin To Net: NetName=RX3 Pin=51MCU-23
+Added Pin To Net: NetName=TX3 Pin=51MCU-24

@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=VCC Pin=usb-1
+Added Component: Designator=S000(DPDT-6)
+Added Pin To Net: NetName=VCC Pin=S000-6
+Added Pin To Net: NetName=NetS000_4 Pin=S000-4
+Added Pin To Net: NetName=NetS000_4 Pin=usb-1
+Added Net: Name=NetS000_4
+Added Member To Class: ClassName=超声波系统 Member=Component S000 SW-DPDT
+Added Room: Name=超声波系统

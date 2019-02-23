@@ -1,0 +1,68 @@
+Removed Pin From Net: NetName=VCC Pin=C3-1
+Removed Pin From Net: NetName=NetC4_2 Pin=C4-2
+Removed Pin From Net: NetName=GND Pin=C6-1
+Removed Pin From Net: NetName=Netc2_4 Pin=C6-2
+Removed Pin From Net: NetName=GND Pin=C7-1
+Removed Pin From Net: NetName=Netc2_7 Pin=C7-2
+Removed Pin From Net: NetName=Netb1_3 Pin=C10-1
+Removed Pin From Net: NetName=GND Pin=C12-2
+Removed Pin From Net: NetName=GND Pin=C13-1
+Removed Pin From Net: NetName=Netb1_7 Pin=C13-2
+Change Component DesignItemId : Designator=C1 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C3 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C4 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C5 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C6 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C7 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C8 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C9 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C10 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C11 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C12 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C13 Old DesignItemId=Cap New DesignItemId=Cap2
+Change Component Footprint: Designator=C1 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C3 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C4 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C5 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C6 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C7 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C8 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C9 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C10 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C11 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C12 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Footprint: Designator=C13 Old Footprint=RAD-0.3 New Footprint=CAPR5-4X5
+Change Component Comment : Designator=C1 Old Comment= New Comment=Cap2
+Change Component Comment : Designator=C5 Old Comment=104 New Comment=Cap2
+Change Component Comment : Designator=C10 Old Comment=105 New Comment=Cap2
+Change Component Comment : Designator=C12 Old Comment=105 New Comment=Cap2
+Change Component Comment : Designator=C4 Old Comment=224 New Comment=Cap2
+Change Component Comment : Designator=C3 Old Comment=Cap New Comment=Cap2
+Change Component Comment : Designator=C6 Old Comment=Cap New Comment=Cap2
+Change Component Comment : Designator=C7 Old Comment=Cap New Comment=Cap2
+Change Component Comment : Designator=C8 Old Comment=Cap New Comment=Cap2
+Change Component Comment : Designator=C9 Old Comment=Cap New Comment=Cap2
+Change Component Comment : Designator=C11 Old Comment=Cap New Comment=Cap2
+Change Component Comment : Designator=C13 Old Comment=Cap New Comment=Cap2
+Added Pin To Net: NetName=VCC Pin=C3-2
+Added Pin To Net: NetName=NetC4_2 Pin=C4-1
+Added Pin To Net: NetName=Netc2_4 Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=Netc2_7 Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=Netb1_3 Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C12-1
+Added Pin To Net: NetName=Netb1_7 Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C13-2
+Change Net Name : Old Net Name=NetC4_2 New Net Name=NetC4_1
+Added Pin To Net: NetName=NetC3_1 Pin=C3-1
+Added Pin To Net: NetName=NetC3_1 Pin=C4-2
+Added Pin To Net: NetName=NetC3_1 Pin=D1-1
+Added Pin To Net: NetName=NetC3_1 Pin=D4-2
+Added Pin To Net: NetName=NetC3_1 Pin=L2-2
+Added Net: Name=NetC3_1
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=C12-2
+Added Net: Name=NetC10_1
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C11 Cap2
+Added Room: Name=PVCπ‹ºÏ≤‚Õº

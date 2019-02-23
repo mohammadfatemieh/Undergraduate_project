@@ -1,0 +1,10 @@
+Added Component: Designator=B1(BAT)
+Added Pin To Net: NetName=GND Pin=B1-1
+Added Pin To Net: NetName=NetB1_2 Pin=B1-2
+Added Member To Class: ClassName=U_刘师STM32 Member=Component B1 BAT
+Added Member To Class: ClassName=U_刘师STM32 Member=Component SD1 SD_CARD
+Added Room: Name=U_ht7111
+Added Room: Name=U_PL2303
+Added Room: Name=U_刘师STM32
+Added Room: Name=U_电源2
+Added Room: Name=U_电源

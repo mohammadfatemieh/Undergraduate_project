@@ -1,0 +1,21 @@
+.\mycc936.o: ..\FATFS\exfuns\mycc936.c
+.\mycc936.o: ..\FATFS\src\ff.h
+.\mycc936.o: ..\FATFS\src\integer.h
+.\mycc936.o: ..\FATFS\src\ffconf.h
+.\mycc936.o: ..\TEXT\fontupd.h
+.\mycc936.o: ..\SYSTEM\sys\sys.h
+.\mycc936.o: ..\USER\stm32f10x.h
+.\mycc936.o: ..\CORE\core_cm3.h
+.\mycc936.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\stdint.h
+.\mycc936.o: ..\USER\system_stm32f10x.h
+.\mycc936.o: ..\USER\stm32f10x_conf.h
+.\mycc936.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
+.\mycc936.o: ..\USER\stm32f10x.h
+.\mycc936.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+.\mycc936.o: ..\STM32F10x_FWLib\inc\stm32f10x_i2c.h
+.\mycc936.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+.\mycc936.o: ..\STM32F10x_FWLib\inc\stm32f10x_spi.h
+.\mycc936.o: ..\STM32F10x_FWLib\inc\stm32f10x_tim.h
+.\mycc936.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+.\mycc936.o: ..\STM32F10x_FWLib\inc\misc.h
+.\mycc936.o: ..\HARDWARE\FLASH\flash.h

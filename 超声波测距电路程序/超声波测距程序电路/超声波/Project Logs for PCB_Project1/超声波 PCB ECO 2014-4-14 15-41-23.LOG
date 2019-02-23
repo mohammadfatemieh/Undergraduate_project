@@ -1,0 +1,8 @@
+Removed Member From Class: ClassName=超声波系统 Member=111
+Added Component: Designator=11111(FWSW)
+Added Pin To Net: NetName=Net51MCU_9 Pin=11111-4
+Added Pin To Net: NetName=Net11111_2 Pin=11111-2
+Added Pin To Net: NetName=Net11111_2 Pin=R1-1
+Added Net: Name=Net11111_2
+Added Member To Class: ClassName=超声波系统 Member=Component 11111 FWSW
+Added Room: Name=超声波系统

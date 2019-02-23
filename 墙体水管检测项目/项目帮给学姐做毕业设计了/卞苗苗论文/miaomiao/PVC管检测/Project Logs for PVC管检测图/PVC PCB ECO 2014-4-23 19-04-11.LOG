@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=NetC4_1 Pin=L1-1
+Removed Pin From Net: NetName=NetC5_2 Pin=L1-2
+Removed Pin From Net: NetName=GND Pin=L2-1
+Removed Pin From Net: NetName=NetC3_1 Pin=L2-2
+Removed Member From Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=L1
+Removed Member From Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=L2
+Added Component: Designator=INDUCT1(CAPR5-4X5)
+Added Component: Designator=INDUCT2(CAPR5-4X5)
+Added Pin To Net: NetName=NetC5_2 Pin=INDUCT1-1
+Added Pin To Net: NetName=NetC4_1 Pin=INDUCT1-2
+Added Pin To Net: NetName=NetC3_1 Pin=INDUCT2-1
+Added Pin To Net: NetName=GND Pin=INDUCT2-2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component INDUCT1 INDUCT
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component INDUCT2 INDUCT
+Added Room: Name=PVCπ‹ºÏ≤‚Õº

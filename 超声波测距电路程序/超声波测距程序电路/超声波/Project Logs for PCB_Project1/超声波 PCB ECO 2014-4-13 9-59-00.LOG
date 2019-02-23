@@ -1,0 +1,22 @@
+Added Component: Designator=FM(HEADER2x1)
+Added Component: Designator=LED(Cap)
+Added Component: Designator=Q?(SFM-T3/X1.6V)
+Added Component: Designator=R4(AXIAL-0.5)
+Added Pin To Net: NetName=GND Pin=FM-2
+Added Pin To Net: NetName=VCC Pin=LED-1
+Added Pin To Net: NetName=VCC Pin=Q?-2
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=Net51MCU_27 Pin=51MCU-27
+Added Pin To Net: NetName=Net51MCU_27 Pin=Q?-1
+Added Net: Name=Net51MCU_27
+Added Pin To Net: NetName=NetFM_1 Pin=FM-1
+Added Pin To Net: NetName=NetFM_1 Pin=Q?-3
+Added Net: Name=NetFM_1
+Added Pin To Net: NetName=NetLED_2 Pin=LED-2
+Added Pin To Net: NetName=NetLED_2 Pin=R4-2
+Added Net: Name=NetLED_2
+Added Member To Class: ClassName=Sheet1 Member=Component FM FENGMING
+Added Member To Class: ClassName=Sheet1 Member=Component LED C
+Added Member To Class: ClassName=Sheet1 Member=Component Q? Diac-NPN
+Added Member To Class: ClassName=Sheet1 Member=Component R4 Res Semi
+Added Room: Name=Sheet1

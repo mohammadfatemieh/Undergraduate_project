@@ -1,0 +1,11 @@
+Added Component: Designator=CHAZHENG9X1(CHAZHEN9X1)
+Added Pin To Net: NetName=VCC Pin=CHAZHENG9X1-1
+Added Pin To Net: NetName=D0 Pin=CHAZHENG9X1-2
+Added Pin To Net: NetName=D1 Pin=CHAZHENG9X1-3
+Added Pin To Net: NetName=D2 Pin=CHAZHENG9X1-4
+Added Pin To Net: NetName=D3 Pin=CHAZHENG9X1-5
+Added Pin To Net: NetName=D4 Pin=CHAZHENG9X1-6
+Added Pin To Net: NetName=D5 Pin=CHAZHENG9X1-7
+Added Pin To Net: NetName=D6 Pin=CHAZHENG9X1-8
+Added Pin To Net: NetName=D7 Pin=CHAZHENG9X1-9
+Added Member To Class: ClassName=Sheet1 Member=Component CHAZHENG9X1

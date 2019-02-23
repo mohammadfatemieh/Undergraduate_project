@@ -1,0 +1,19 @@
+.\24cxx.o: ..\HARDWARE\24CXX\24cxx.c
+.\24cxx.o: ..\HARDWARE\24CXX\24cxx.h
+.\24cxx.o: ..\HARDWARE\IIC\myiic.h
+.\24cxx.o: ..\SYSTEM\sys\sys.h
+.\24cxx.o: ..\USER\stm32f10x.h
+.\24cxx.o: ..\CORE\core_cm3.h
+.\24cxx.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\stdint.h
+.\24cxx.o: ..\USER\system_stm32f10x.h
+.\24cxx.o: ..\USER\stm32f10x_conf.h
+.\24cxx.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
+.\24cxx.o: ..\USER\stm32f10x.h
+.\24cxx.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+.\24cxx.o: ..\STM32F10x_FWLib\inc\stm32f10x_i2c.h
+.\24cxx.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+.\24cxx.o: ..\STM32F10x_FWLib\inc\stm32f10x_spi.h
+.\24cxx.o: ..\STM32F10x_FWLib\inc\stm32f10x_tim.h
+.\24cxx.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+.\24cxx.o: ..\STM32F10x_FWLib\inc\misc.h
+.\24cxx.o: ..\SYSTEM\delay\delay.h

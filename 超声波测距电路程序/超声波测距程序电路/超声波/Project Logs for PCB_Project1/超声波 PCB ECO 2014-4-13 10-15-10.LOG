@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=LCDEN Pin=*-6
+Added Pin To Net: NetName=LCDEN Pin=51MCU-14
+Added Net: Name=LCDEN
+Added Room: Name=Sheet1

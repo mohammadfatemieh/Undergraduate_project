@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=Netb1_4 Pin=D3-1
+Removed Pin From Net: NetName=VIN- Pin=D3-2
+Change Component Designator: OldDesignator=D2 NewDesignator=D9
+Change Component Designator: OldDesignator=D3 NewDesignator=D10
+Change Component Designator: OldDesignator=D3 NewDesignator=D12
+Added Pin To Net: NetName=VIN Pin=D10-1
+Added Pin To Net: NetName=Netb1_7 Pin=D10-2
+Added Pin To Net: NetName=Netb1_4 Pin=D12-1
+Added Pin To Net: NetName=VIN- Pin=D12-2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D9 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D10 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D12 IN4148

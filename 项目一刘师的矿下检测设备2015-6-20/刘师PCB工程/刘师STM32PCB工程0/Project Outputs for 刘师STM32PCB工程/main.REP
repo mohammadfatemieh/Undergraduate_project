@@ -1,0 +1,12 @@
+------------------------------------------------------------
+Design Hierarchy Report for 刘师STM32PCB工程.PrjPcb
+-- 2015/4/30
+-- 16:25:43
+------------------------------------------------------------
+
+main                          SCH        (main.SchDoc)
+    U_ht7111                  SCH        (ht7111.SchDoc)
+    U_PL2303                  SCH        (PL2303.SchDoc)
+    U_刘师STM32                 SCH        (刘师STM32.SchDoc)
+    U_电源                      SCH        (电源.SchDoc)
+    U_电源2                     SCH        (电源2.SchDoc)

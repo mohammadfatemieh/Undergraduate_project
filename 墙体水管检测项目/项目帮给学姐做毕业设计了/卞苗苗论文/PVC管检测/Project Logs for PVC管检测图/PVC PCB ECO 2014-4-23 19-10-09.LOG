@@ -1,0 +1,6 @@
+Added Component: Designator=*4(12WEN)
+Added Pin To Net: NetName=VIN Pin=*4-1
+Added Pin To Net: NetName=GND Pin=*4-2
+Added Pin To Net: NetName=VCC Pin=*4-3
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component *4 12EN
+Added Room: Name=PVCπ‹ºÏ≤‚Õº

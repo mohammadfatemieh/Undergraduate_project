@@ -1,0 +1,10 @@
+Removed Member From Class: ClassName=U_刘师STM32 Member=RES-D17
+Removed Member From Class: ClassName=U_刘师STM32 Member=RES-D18
+Change Component Designator: OldDesignator=RES-D17 NewDesignator=R?
+Change Component Designator: OldDesignator=RES-D18 NewDesignator=R?
+Change Component Designator: OldDesignator=RES-D19 NewDesignator=R?
+Added Room: Name=U_ht7111
+Added Room: Name=U_PL2303
+Added Room: Name=U_刘师STM32
+Added Room: Name=U_电源2
+Added Room: Name=U_电源

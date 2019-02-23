@@ -1,0 +1,45 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~刘师STM32PCB工程.PrjPcb|ReportField=ProjectFullPath~C:\Users\SMRITI PERTOR\Desktop\刘师STM32PCB工程\刘师STM32PCB工程.PrjPcb|ReportField=Title~Bill of Materials For PCB Document [MAIN.PcbDoc]|ReportField=TotalQuantity~95|ReportField=ReportTime~13:32:04|ReportField=ReportDate~2015/4/30|ReportField=ReportDateTime~2015/4/30 13:32:04|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=DataSourceFileName~MAIN.PcbDoc|ReportField=DataSourceFullPath~C:\Users\SMRITI PERTOR\Desktop\刘师STM32PCB工程\MAIN.PcbDoc
+BAT||B1|BAT|BAT|1
+SWITCH|Header, 3-Pin, Dual row|B3, B7|SWITCH|SWITCH|2
+BOTEN_RESET|THE BOTEEN OD RESET|B5, B6, KEY2, REST|BOTTON_RESET|BOTEN_RESET|4
+0.1uf||C3, C4|8050|CAP|2
+104||C5, C6, C7, C8, C9, C11, C17, C18, C19, C20, C21, C24, C28, C29, C31, C33|8050|CAP|16
+1UF||C10|8050|CAP|1
+10uf||c1, C2, C25|8050|CAP|3
+22||C12, C13, C14, C15|8050|CAP|4
+10UF||C16|Cap|CAP1_104|1
+22PF||C22, C23|8050|CAP|2
+220UF||C26, C27, C30, C32|Cap|CAP1_104|4
+1N4148||D1, D2|Dio-4|Diode|2
+Diode||D3|Dio-4|Diode|1
+S050||D4|S8550|S85x1|1
+S8550||D5|S8550|S855X-|1
+HADER18X2||H1|HEADER18X2|HEADER36|1
+HX711||HX1|hx711|HX711|1
+LED||LED1, LED2, LED3|led|LED|3
+Header  3X2|Header, 3-Pin, Dual row|P1, P2, P3|HEADER3x2|Header  3X2|3
+P|Header, 2-Pin|P4|heard2x1|Header 2|1
+S|Header, 2-Pin|P5|heard2x1|Header 2|1
+Header 5x1||P6|HEADER-1x5|Header 5x1|1
+S855X||Q1|S8550|S855X|1
+RES-0603||R1|8050|RES-0603|1
+1A|zihuifu|R2|Resistor|Res8050|1
+4.7K||R3, R15|8050|RES-D|2
+1K||R4, R6, R7, R16, R19, R21, R23|8050|RES-D|7
+3K||R5|8050|RES-D|1
+10K||R8, R17, R18, R20|8050|RES-D|4
+473||R9, R10, R11, R12|8050|RES-D|4
+100||R13, R14|8050|RES-D|2
+45K||R22|8050|RES-D|1
+22R||R24, R25|8050|RES-D|2
+1.5K||R26|8050|RES-D|1
+510||R27, R28, R29|8050|RES-D|3
+SOURCE||S+|SOURCE -SHURU|SOURCE|1
+SD_CARD||SD1|SD_CARD|SD_CARD|1
+PL2303||U1|PL2303X|PL2303|1
+STM32F103RB||U2|STM32F10X|STM32F103RB|1
+AMS117-3.3||U3|AMS1117|AMS117|1
+AMS117-5||U4|AMS1117|AMS117|1
+XTAL-23.768||X1|heard2x1|XTAL-32.768|1
+XTAL|XTAL 11.0592|X2|XTAL|XTAL|1
+12MHZ|XTAL 11.0592|XT1|XTAL|XTAL|1

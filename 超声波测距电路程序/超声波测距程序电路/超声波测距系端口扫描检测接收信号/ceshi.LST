@@ -1,0 +1,593 @@
+C51 COMPILER V9.53.0.0   CESHI                                                             04/12/2015 20:12:45 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE CESHI
+OBJECT MODULE PLACED IN ceshi.OBJ
+COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE ceshi.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+*** WARNING C500 IN LINE 1 OF ceshi.c: LICENSE ERROR (R207(3): REGISTRY READ ERROR)
+
+   1          #include<AT89X51.H>
+   2          #include<intrins.h>
+   3          #include<stdio.h>
+   4          #define uchar unsigned char
+   5          #define uint unsigned int
+   6          #define nop _nop_()
+   7          #define LCD_Data P0
+   8          #define Busy    0x80 //用于检测LCD状态字中的Busy标识
+   9          
+  10          sbit csb1=P2^0;//tr 40KHz超声波发射脚
+  11          sbit in1=P2^1;
+  12          
+  13          sbit csb2=P2^2;
+  14          sbit in2=P2^3;
+  15          
+  16          sbit  csb3=P2^4;
+  17          sbit  in3=P2^5;
+  18          
+  19          sbit  csb4=P2^6;
+  20          sbit  in4=P2^7;
+  21          
+  22          sbit LCD_RS=P3^5;//定义引脚
+  23          sbit LCD_RW=P3^6;
+  24          sbit LCD_E=P3^4;
+  25          //sbit PSB =P3^7;   
+  26          sbit PSB =P3^1; 
+  27          ///////////////////////
+  28          //sbit LCD_RS=P0^7;//定义引脚
+  29          //sbit LCD_RW=P0^6;
+  30          //sbit LCD_E=P0^5;
+  31          ////sbit PSB =P3^7;   
+  32          //sbit PSB =P0^4;   //PSB脚为12864-12系列的串、并通讯功能切换，我们使用8位并行接口，PSB=1
+  33          ////////////////////////
+  34          sbit beef =P0^3;
+  35          /*************************///LCD显示字符函数
+  36          void WriteDataLCD(unsigned char WDLCD);
+  37          void WriteCommandLCD(unsigned char WCLCD,BuysC);
+  38          unsigned char ReadDataLCD(void);
+  39          unsigned char ReadStatusLCD(void);
+  40          void LCDInit(void);
+  41          void LCDClear(void);
+  42          //void LCDFlash(void);
+  43          void DisplayOneChar(unsigned char X, unsigned char Y, unsigned char DData);
+  44          void DisplayListChar(unsigned char X, unsigned char Y, unsigned char code *DData);
+  45          //void DisplayImage (unsigned char code *DData);
+  46          void Delay5Ms(void);
+  47          void Delay400Ms(void);
+  48          /*************************/
+  49          /////////////////////////////超声波发射接收子函数体
+  50          
+  51          void  delay100us();
+  52          void delay_nms(uint n);
+  53          void tran1(void);
+  54          void tran2(void);
+C51 COMPILER V9.53.0.0   CESHI                                                             04/12/2015 20:12:45 PAGE 2   
+
+  55          void tran3(void);
+  56          void tran4(void);
+  57          void display(uint dat);
+  58          /**************************/
+  59          unsigned char  shuju[5];//////////////////////////////字符定义；
+  60          unsigned char  shuju_send[5];
+  61          ////////////////////////////////////////////////超声波发射接收全局变量
+  62          unsigned char flag;
+  63          unsigned int tmp,dis,high_time ,low_time;
+  64          ///////////////////////////////////////////////
+  65          
+  66          void serial_init(void)
+  67          {
+  68   1          TMOD=0X20;//方式2自动重装
+  69   1          TH1=0XFD;
+  70   1          TL1=0XFD;
+  71   1          TR1=1;//启动计数/定时
+  72   1          SCON=0X50;//  SM0=0;SM1=1;SM2=0;REN=1;//10位异步通讯方式1//REN为1开始接收，为0停止接收
+  73   1          EA=0;
+  74   1      //    TR1=0;//定时器不能关
+  75   1          
+  76   1      }
+  77          
+  78          //串口发送时是不需要串口中断参与的，而串口接收数据时则需要串口中断参与；
+  79          
+  80          
+  81          void serial_send(void)
+  82          {
+  83   1            unsigned char i;
+  84   1      //    EA=0;
+  85   1      //    TR1=0;//定时器不能关
+  86   1      //delay_ms(20);
+  87   1      //TR1=1;//即使关掉了也要想办法打开在发送数据之前
+  88   1          for(i=0;i<6;i++)
+  89   1            {
+  90   2              SBUF=shuju_send[i];
+  91   2      //        while(!TI);//等待发送数据完成
+  92   2              Delay400Ms();
+  93   2      //        Delay400Ms();
+  94   2              TI=0;
+  95   2            }
+  96   1      
+  97   1      }
+  98          
+  99          /////////////////////////////////////////////////主程序函数
+ 100          void main(void)
+ 101          {
+ 102   1      //  PT1=1;
+ 103   1      //  serial_init();
+ 104   1        Delay400Ms(); //启动等待，等LCD讲入工作状态
+ 105   1       LCDInit(); //LCM初始化
+ 106   1       Delay5Ms(); //延时片刻(可不要)
+ 107   1      //  PT0=0;
+ 108   1      
+ 109   1        while(1)
+ 110   1        {
+ 111   2      //    uint i;
+ 112   2            
+ 113   2              tran1( );   //A
+ 114   2              Delay5Ms();
+ 115   2              tran2( ); //B
+ 116   2      ////        serial_send();        
+C51 COMPILER V9.53.0.0   CESHI                                                             04/12/2015 20:12:45 PAGE 3   
+
+ 117   2              /*Delay5Ms();
+ 118   2              Delay5Ms();
+ 119   2      ////        Delay400Ms();//通过延时防止因csb1接收引起中断 
+ 120   2              tran3( );     //C*/
+ 121   2      //        serial_send();        
+ 122   2              Delay5Ms();
+ 123   2      ////        Delay400Ms();//通过延时防止因csb1接收引起中断 
+ 124   2              tran4( );   //D
+ 125   2      //        serial_send();        
+ 126   2              Delay5Ms();
+ 127   2              //---Delay400Ms();    
+ 128   2      //        Delay400Ms();
+ 129   2      //        Delay400Ms();//通过延时防止因csb1接收引起中断 
+ 130   2      //    LCDClear();//清屏
+ 131   2      //    Delay400Ms();
+ 132   2      //    LCDClear();
+ 133   2      
+ 134   2        }
+ 135   1      }
+ 136          ////////////////////////////////////////////////////
+ 137          
+ 138          //延时函数体
+ 139          void  delay100us()
+ 140          {
+ 141   1          uchar i;
+ 142   1              for(i=0;i<50;i++)
+ 143   1                  ;
+ 144   1      }
+ 145          void delay_nms(uint n)
+ 146          {
+ 147   1      uchar i; 
+ 148   1      while(n--)
+ 149   1      {
+ 150   2      for(i=123;i>0;i--);
+ 151   2      }
+ 152   1      }
+ 153          //////超声波发射程序
+ 154          void tran1(void)///可通过设置K数值选择执行相应的I0发射超声波
+ 155          {
+ 156   1                uchar i;
+ 157   1                float temp;
+ 158   1                  TMOD=0XF0;
+ 159   1                  TMOD |=0X01;
+ 160   1                  TL0=0X47;
+ 161   1                  TH0=0XFF;
+ 162   1                  TR0=0;
+ 163   1                  ET0=0;//关闭timme0中断?
+ 164   1                  csb1=1;
+ 165   1                  nop;
+ 166   1                  nop;
+ 167   1                  nop;
+ 168   1                  nop;
+ 169   1                  nop;
+ 170   1                  nop;
+ 171   1                  nop;
+ 172   1                  nop;
+ 173   1                  nop;
+ 174   1                  nop;
+ 175   1                  nop;
+ 176   1                  nop;
+ 177   1                  nop;
+ 178   1      
+C51 COMPILER V9.53.0.0   CESHI                                                             04/12/2015 20:12:45 PAGE 4   
+
+ 179   1                          csb1=0;
+ 180   1                          TR0=0;
+ 181   1                          TH0=0;
+ 182   1                          TL0=0;
+ 183   1                            
+ 184   1                    while(in1==0);
+ 185   1                    TR0=1;
+ 186   1                    while(in1==1);
+ 187   1                    TR0=0;    
+ 188   1                          //    temp=(TH0*256+TL0)*1.08/58;   //1.08为分频之后的数
+ 189   1                              temp=(TH0*256+TL0);//*1.08/58;    //1.08为分频之后的数    
+ 190   1                              temp=(temp/1000)/2;
+ 191   1                              temp*=340;
+ 192   1                              temp=temp/10;
+ 193   1                              //蜂鸣器响
+ 194   1                    if(temp<20)beef=0;
+ 195   1                          delay_nms(60);
+ 196   1                                beef=1;
+ 197   1                                //
+ 198   1                    if(temp>4000)temp=4000;
+ 199   1                              dis =(unsigned int)temp;//dis将直接用于显示函数
+ 200   1                      delay_nms(60);
+ 201   1                      display(dis);
+ 202   1                      for(i=0;i<6;i++)
+ 203   1                      {
+ 204   2                          DisplayOneChar(i,1,shuju[i]); //显示字库中的中文数子
+ 205   2                      }
+ 206   1                      serial_init();
+ 207   1                      
+ 208   1                      serial_send();
+ 209   1                      
+ 210   1      }
+ 211          
+ 212          void tran2(void)///可通过设置K数值选择执行相应的I0发射超声波
+ 213          {
+ 214   1                uchar i;
+ 215   1                float temp;
+ 216   1                  TMOD=0XF0;
+ 217   1                  TMOD |=0X01;
+ 218   1                  TL0=0X47;
+ 219   1                  TH0=0XFF;
+ 220   1                  TR0=0;
+ 221   1                  ET0=0;//关闭timme0中断?
+ 222   1                  csb2=1;
+ 223   1                  nop;
+ 224   1                  nop;
+ 225   1                  nop;
+ 226   1                  nop;
+ 227   1                  nop;
+ 228   1                  nop;
+ 229   1                  nop;
+ 230   1                  nop;
+ 231   1                  nop;
+ 232   1                  nop;
+ 233   1                  nop;
+ 234   1                  nop;
+ 235   1                  nop;
+ 236   1      
+ 237   1                          csb2=0;
+ 238   1                          TR0=0;
+ 239   1                          TH0=0;
+ 240   1                          TL0=0;
+C51 COMPILER V9.53.0.0   CESHI                                                             04/12/2015 20:12:45 PAGE 5   
+
+ 241   1                            
+ 242   1                    while(in2==0);
+ 243   1                    TR0=1;
+ 244   1                    while(in2==1);
+ 245   1                    TR0=0;    
+ 246   1                              temp=(TH0*256+TL0);//*1.08/58;    //1.08为分频之后的数    
+ 247   1                              temp=(temp/1000)/2;
+ 248   1                              temp*=340;
+ 249   1                              temp=temp/10;
+ 250   1                    if(temp<20)beef=0;
+ 251   1                          delay_nms(60);
+ 252   1                                beef=1;               
+ 253   1                    if(temp>4000)temp=4000;
+ 254   1                              dis =(unsigned int)temp;//dis将直接用于显示函数
+ 255   1                      delay_nms(60);
+ 256   1                      display(dis);
+ 257   1                      shuju[0]=shuju[0]+1;//B
+ 258   1                      for(i=0;i<6;i++)
+ 259   1                      DisplayOneChar(i,2,shuju[i]); //显示字库中的中文数子
+ 260   1                      shuju_send[0]=shuju_send[0]+1;
+ 261   1                      serial_init();
+ 262   1                      serial_send();
+ 263   1                      
+ 264   1      }
+ 265          void tran3(void)///可通过设置K数值选择执行相应的I0发射超声波
+ 266          {
+ 267   1                uchar i;
+ 268   1                float temp;
+ 269   1                  TMOD=0XF0;
+ 270   1                  TMOD |=0X01;
+ 271   1                  TL0=0X47;
+ 272   1                  TH0=0XFF;
+ 273   1                  TR0=0;
+ 274   1                  ET0=0;//关闭timme0中断?
+ 275   1                  csb3=1;
+ 276   1                  nop;
+ 277   1                  nop;
+ 278   1                  nop;
+ 279   1                  nop;
+ 280   1                  nop;
+ 281   1                  nop;
+ 282   1                  nop;
+ 283   1                  nop;
+ 284   1                  nop;
+ 285   1                  nop;
+ 286   1                  nop;
+ 287   1                  nop;
+ 288   1                  nop;
+ 289   1      
+ 290   1                          csb3=0;
+ 291   1                          TR0=0;
+ 292   1                          TH0=0;
+ 293   1                          TL0=0;
+ 294   1                            
+ 295   1                    while(in3==0);
+ 296   1                    TR0=1;
+ 297   1                    while(in3==1);
+ 298   1                    TR0=0;    
+ 299   1                    //          temp=(TH0*256+TL0)*1.08/58;   //1.08为分频之后的数
+ 300   1                              temp=(TH0*256+TL0);//*1.08/58;    //1.08为分频之后的数    
+ 301   1                              temp=(temp/1000)/2;
+ 302   1                              temp*=340;
+C51 COMPILER V9.53.0.0   CESHI                                                             04/12/2015 20:12:45 PAGE 6   
+
+ 303   1                              temp=temp/10;
+ 304   1                              //蜂鸣器响
+ 305   1                    if(temp<20)beef=0;
+ 306   1                          delay_nms(60);
+ 307   1                                beef=1;
+ 308   1                                //                        
+ 309   1                    if(temp>4000)temp=4000;
+ 310   1                              dis =(unsigned int)temp;//dis将直接用于显示函数
+ 311   1                      delay_nms(60);
+ 312   1                      display(dis);
+ 313   1                      shuju[0]=shuju[0]+2;//C
+ 314   1                      for(i=0;i<6;i++)
+ 315   1                      DisplayOneChar(i,3,shuju[i]); //显示字库中的中文数子
+ 316   1                      shuju_send[0]=shuju_send[0]+2;
+ 317   1                      serial_init();
+ 318   1                      serial_send();
+ 319   1      //                
+ 320   1                      
+ 321   1      }
+ 322          void tran4(void)///可通过设置K数值选择执行相应的I0发射超声波
+ 323          {
+ 324   1                uchar i;
+ 325   1                float temp;
+ 326   1                  TMOD=0XF0;
+ 327   1                  TMOD |=0X01;
+ 328   1                  TL0=0X47;
+ 329   1                  TH0=0XFF;
+ 330   1                  TR0=0;
+ 331   1                  ET0=0;//关闭timme0中断?
+ 332   1                  csb4=1;
+ 333   1                  nop;
+ 334   1                  nop;
+ 335   1                  nop;
+ 336   1                  nop;
+ 337   1                  nop;
+ 338   1                  nop;
+ 339   1                  nop;
+ 340   1                  nop;
+ 341   1                  nop;
+ 342   1                  nop;
+ 343   1                  nop;
+ 344   1                  nop;
+ 345   1                  nop;
+ 346   1      
+ 347   1                          csb4=0;
+ 348   1                          TR0=0;
+ 349   1                          TH0=0;
+ 350   1                          TL0=0;
+ 351   1                            
+ 352   1                    while(in4==0);
+ 353   1                    TR0=1;
+ 354   1                    while(in4==1);
+ 355   1                    TR0=0;    
+ 356   1                    //          temp=(TH0*256+TL0)*1.08/58;   //1.08为分频之后的数
+ 357   1                              temp=(TH0*256+TL0);//*1.08/58;    //1.08为分频之后的数    
+ 358   1                              temp=(temp/1000)/2;
+ 359   1                              temp*=340;
+ 360   1                              temp=temp/10;
+ 361   1                              //蜂鸣器响
+ 362   1                    if(temp<20)beef=0;
+ 363   1                          delay_nms(60);
+ 364   1                                beef=1;
+C51 COMPILER V9.53.0.0   CESHI                                                             04/12/2015 20:12:45 PAGE 7   
+
+ 365   1                                //                        
+ 366   1                    if(temp>4000)temp=4000;
+ 367   1                              dis =(unsigned int)temp;//dis将直接用于显示函数
+ 368   1                      delay_nms(60);
+ 369   1                      display(dis);
+ 370   1                      shuju[0]=shuju[0]+3;//D
+ 371   1                      for(i=0;i<6;i++)
+ 372   1                      DisplayOneChar(i,4,shuju[i]); //显示字库中的中文数子
+ 373   1                      shuju_send[0]=shuju_send[0]+3;
+ 374   1                      serial_init();
+ 375   1                      serial_send();
+ 376   1                      
+ 377   1                      
+ 378   1      }
+ 379          ///////////////////////////////////
+ 380          void display(uint dat)
+ 381          {
+ 382   1      
+ 383   1          uchar i,j,k;//定义变量
+ 384   1          i=dat/100;//白
+ 385   1          j=dat%100/10;//十位
+ 386   1          k=dat%100%10;//个 
+ 387   1          
+ 388   1      //    serial_char(i);
+ 389   1      //    delay_nms(40);
+ 390   1      //    serial_char(j);
+ 391   1      //    delay_nms(40);
+ 392   1      //    serial_char(k);
+ 393   1      //    delay_nms(40);
+ 394   1          shuju_send[0]=65;//A
+ 395   1          shuju_send[1]=i+48;
+ 396   1          shuju_send[2]='.';
+ 397   1          shuju_send[3]=j+48;
+ 398   1          shuju_send[4]=k+48;
+ 399   1          shuju_send[5]=109;
+ 400   1          
+ 401   1          shuju[0]=65;
+ 402   1          shuju[1]=i+48;
+ 403   1          shuju[2]='.';
+ 404   1          shuju[3]=j+48;
+ 405   1          shuju[4]=k+48;
+ 406   1          shuju[5]=109;//或者shuju[4]='m'；
+ 407   1      }
+ 408          
+ 409          
+ 410          
+ 411          ////////////////////////////////////////////
+ 412          //1写数据
+ 413          void WriteDataLCD(unsigned char WDLCD)
+ 414          {
+ 415   1       ReadStatusLCD(); //检测忙 
+ 416   1       LCD_RS = 1;
+ 417   1       LCD_RW = 0;
+ 418   1       LCD_Data = WDLCD;
+ 419   1       LCD_E = 1;
+ 420   1       LCD_E = 1;
+ 421   1       LCD_E = 1;
+ 422   1       LCD_E = 0;
+ 423   1      }
+ 424          
+ 425          //2写指令
+ 426          void WriteCommandLCD(unsigned char WCLCD,BuysC) //BuysC为0时忽略忙检测
+C51 COMPILER V9.53.0.0   CESHI                                                             04/12/2015 20:12:45 PAGE 8   
+
+ 427          {
+ 428   1       if (BuysC) ReadStatusLCD(); //根据需要检测忙 
+ 429   1       LCD_RS = 0;
+ 430   1       LCD_RW = 0; 
+ 431   1       LCD_Data = WCLCD;
+ 432   1       LCD_E = 1; 
+ 433   1       LCD_E = 1;
+ 434   1       LCD_E = 1;
+ 435   1       LCD_E = 0;  
+ 436   1      }
+ 437          
+ 438          //3读数据
+ 439          unsigned char ReadDataLCD(void)
+ 440          {
+ 441   1       LCD_RS = 1; 
+ 442   1       LCD_RW = 1;
+ 443   1       LCD_E = 0;
+ 444   1       LCD_E = 0;
+ 445   1       LCD_E = 1;
+ 446   1       return(LCD_Data);
+ 447   1      }
+ 448          
+ 449          //4读状态
+ 450          unsigned char ReadStatusLCD(void)
+ 451          {
+ 452   1       LCD_Data = 0xFF; 
+ 453   1       LCD_RS = 0;
+ 454   1       LCD_RW = 1; 
+ 455   1       LCD_E = 1;
+ 456   1       while (LCD_Data & Busy); //检测忙信号
+ 457   1       LCD_E = 0;
+ 458   1       return(LCD_Data);
+ 459   1      }
+ 460          
+ 461          void LCDInit(void) //5LCM初始化
+ 462          {
+ 463   1       WriteCommandLCD(0x30,1); //显示模式设置,开始要求每次检测忙信号
+ 464   1       WriteCommandLCD(0x01,1); //显示清屏
+ 465   1       WriteCommandLCD(0x06,1); // 显示光标移动设置
+ 466   1       WriteCommandLCD(0x0C,1); // 显示开及光标设置
+ 467   1      }
+ 468          void LCDClear(void) //6清屏
+ 469          {
+ 470   1       WriteCommandLCD(0x01,1); //显示清屏
+ 471   1       WriteCommandLCD(0x34,1); // 显示光标移动设置
+ 472   1       WriteCommandLCD(0x30,1); // 显示开及光标设置
+ 473   1      }
+ 474          
+ 475          void DisplayOneChar(unsigned char X, unsigned char Y, unsigned char DData)
+ 476          {
+ 477   1       if(Y<1)
+ 478   1        Y=1;
+ 479   1       if(Y>4)
+ 480   1        Y=4;
+ 481   1       X &= 0x0F; //限制X不能大于16，Y不能大于1
+ 482   1       switch(Y){
+ 483   2        case 1:X|=0X80;break;
+ 484   2        case 2:X|=0X90;break;
+ 485   2        case 3:X|=0X88;break;
+ 486   2        case 4:X|=0X98;break;
+ 487   2        }
+ 488   1       WriteCommandLCD(X, 0); //这里不检测忙信号，发送地址码
+C51 COMPILER V9.53.0.0   CESHI                                                             04/12/2015 20:12:45 PAGE 9   
+
+ 489   1       WriteDataLCD(DData);
+ 490   1      }
+ 491          
+ 492          //9按指定位置显示一串字符
+ 493          void DisplayListChar(unsigned char X, unsigned char Y, unsigned char code *DData)
+ 494          {
+ 495   1       unsigned char ListLength,X2;
+ 496   1        ListLength = 0;
+ 497   1        X2=X;
+ 498   1       if(Y<1)
+ 499   1        Y=1;
+ 500   1       if(Y>4)
+ 501   1        Y=4;
+ 502   1       X &= 0x0F; //限制X不能大于16，Y在1-4之内
+ 503   1       switch(Y){
+ 504   2        case 1:X2|=0X80;break;  //根据行数来选择相应地址
+ 505   2        case 2:X2|=0X90;break;
+ 506   2        case 3:X2|=0X88;break;
+ 507   2        case 4:X2|=0X98;break;
+ 508   2        }
+ 509   1       WriteCommandLCD(X2, 1); //10发送地址码
+ 510   1        while (DData[ListLength]>=0x20) //若到达字串尾则退出
+ 511   1        {
+ 512   2         if (X <= 0x0F) //X坐标应小于0xF
+ 513   2          {
+ 514   3           WriteDataLCD(DData[ListLength]); //
+ 515   3           ListLength++;
+ 516   3         X++;
+ 517   3         Delay5Ms();
+ 518   3          }
+ 519   2        }
+ 520   1      }
+ 521          //125ms延时
+ 522          void Delay5Ms(void)
+ 523          {
+ 524   1       unsigned int TempCyc = 5552;
+ 525   1       while(TempCyc--);
+ 526   1      }
+ 527          
+ 528          //13400ms延时
+ 529          void Delay400Ms(void)
+ 530          {
+ 531   1       unsigned char TempCycA = 5;
+ 532   1       unsigned int TempCycB;
+ 533   1       while(TempCycA--)
+ 534   1       {
+ 535   2        TempCycB=7269;
+ 536   2        while(TempCycB--);
+ 537   2       };
+ 538   1      }
+ 539          /////////////////////////////////////
+ 540          
+ 541          
+ 542          
+ 543          
+ 544          
+ 545          
+ 546          
+ 547          
+ 548          
+ 549          
+ 550          
+C51 COMPILER V9.53.0.0   CESHI                                                             04/12/2015 20:12:45 PAGE 10  
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1568    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     19      30
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

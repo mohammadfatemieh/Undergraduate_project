@@ -1,0 +1,683 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\SMRITI PERTOR\Desktop\ÁõÊ¦STM32PCB¹¤³Ì\MAIN.PcbDoc
+Date     : 2015/4/30
+Time     : 13:25:52
+
+ERROR : More than 500 violations detected, DRC was stopped
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=8mil) (All),(All)
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (3724.26mil,3363mil)(3726.592mil,3363mil)  Top Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (3726.592mil,3363mil)(3782.766mil,3419.174mil)  Top Layer
+Rule Violations :2
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=20mil) (Preferred=14mil) (All)
+   Violation between Width Constraint: Polygon Arc (3195mil,1650mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1157mil)(1574.834mil,1157mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1573mil,1129mil)(1573mil,1158.834mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1170mil)(1561.834mil,1170mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1560mil,1129mil)(1560mil,1171.834mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1129mil)(1554mil,1177.834mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1131mil)(1600.834mil,1131mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1129mil)(1602.834mil,1129mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1144mil)(1587.834mil,1144mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1586mil,1129mil)(1586mil,1145.834mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1177.834mil)(1602.834mil,1129mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1378mil)(1579.834mil,1378mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1365mil)(1566.834mil,1365mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1352.166mil)(1608.945mil,1407.11mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1391mil)(1592.834mil,1391mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1404mil)(1605.834mil,1404mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1430mil)(1793.5mil,1430mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1608.945mil,1407.11mil)(1751.055mil,1407.11mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1417mil)(1806.5mil,1417mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1443mil)(1646mil,1443mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1638mil,1407.11mil)(1638mil,1451mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1456mil)(1633mil,1456mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1768mil,1129mil)(1768mil,1139.834mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1781mil,1129mil)(1781mil,1152.834mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1768mil,1390.166mil)(1768mil,1455.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1794mil,1129mil)(1794mil,1165.834mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1781mil,1377.166mil)(1781mil,1442.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1807mil,1129mil)(1807mil,1178.834mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1820mil,1129mil)(1820mil,1191.834mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1820mil,1338.166mil)(1820mil,1403.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1754.166mil,1404mil)(1819.5mil,1404mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1807mil,1351.166mil)(1807mil,1416.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1794mil,1364.166mil)(1794mil,1429.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1690mil,1407.11mil)(1690mil,1436mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1703mil,1407.11mil)(1703mil,1436mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1651mil,1407.11mil)(1651mil,1438mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1677mil,1407.11mil)(1677mil,1436mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1664mil,1407.11mil)(1664mil,1436mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1653mil,1436mil)(1707mil,1436mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1716mil,1407.11mil)(1716mil,1445mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1714mil,1443mil)(1780.5mil,1443mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1707mil,1436mil)(1729.917mil,1458.917mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1729mil,1407.11mil)(1729mil,1458mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1727mil,1456mil)(1767.5mil,1456mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1612mil,1407.11mil)(1612mil,1697mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1625mil,1407.11mil)(1625mil,1684mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1573mil,1371.166mil)(1573mil,1736mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1586mil,1384.166mil)(1586mil,1723mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1599mil,1397.166mil)(1599mil,1710mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1469mil)(1626mil,1469mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1626mil,1463mil)(1653mil,1436mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1482mil)(1626mil,1482mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1626mil,1463mil)(1626mil,1517mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1495mil)(1626mil,1495mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1573mil)(1626mil,1573mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1508mil)(1626mil,1508mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1586mil)(1626mil,1586mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1626mil,1563mil)(1626mil,1617mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1599mil)(1626mil,1599mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1521mil)(1630mil,1521mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1626mil,1517mil)(1649mil,1540mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1534mil)(1643mil,1534mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1547mil)(1642mil,1547mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1626mil,1563mil)(1649mil,1540mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1560mil)(1629mil,1560mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1742mil,1407.11mil)(1742mil,1459mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1755mil,1403.166mil)(1755mil,1459mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1730.237mil,1459mil)(1764.5mil,1459mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1755mil,1521mil)(1755mil,1559mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1742mil,1521mil)(1742mil,1559mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1730.237mil,1521mil)(1795.5mil,1521mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1795.5mil,1521mil)(1811mil,1505.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1730.237mil,1521mil)(1764.5mil,1521mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1795.5mil,1521mil)(1811mil,1505.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1820mil,1496.5mil)(1820mil,1559mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1807mil,1509.5mil)(1807mil,1559mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1711mil,1540mil)(1729.917mil,1521.083mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1720.571mil,1526.508mil)(1724.358mil,1523.339mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1638mil,1529mil)(1638mil,1551mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1729mil,1522mil)(1729mil,1558mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1716mil,1535mil)(1716mil,1545mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1711mil,1540mil)(1729.917mil,1558.917mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1764.5mil,1521mil)(1795.5mil,1521mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1764.5mil,1521mil)(1795.5mil,1521mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1768mil,1521mil)(1768mil,1559mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1794mil,1521mil)(1794mil,1559mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1781mil,1521mil)(1781mil,1559mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1757.166mil,1129mil)(1822.11mil,1193.945mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1811.166mil,1183mil)(2040.5mil,1183mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1235mil)(1988.5mil,1235mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1196mil)(2027.5mil,1196mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1209mil)(2014.5mil,1209mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1757.166mil,1129mil)(2062.102mil,1129mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1759.166mil,1131mil)(2062.102mil,1131mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1772.166mil,1144mil)(2062.102mil,1144mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1785.166mil,1157mil)(2062.102mil,1157mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1798.166mil,1170mil)(2053.5mil,1170mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1793.166mil,1365mil)(1858.5mil,1365mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1806.166mil,1352mil)(1871.5mil,1352mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1751.055mil,1407.11mil)(1822.11mil,1336.055mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1780.166mil,1378mil)(1845.5mil,1378mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1767.166mil,1391mil)(1832.5mil,1391mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1274mil)(1949.5mil,1274mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1248mil)(1975.5mil,1248mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1261mil)(1962.5mil,1261mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1819.166mil,1339mil)(1884.5mil,1339mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1287mil)(1936.5mil,1287mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1300mil)(1923.5mil,1300mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1872mil,1129mil)(1872mil,1351.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1885mil,1129mil)(1885mil,1338.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1833mil,1129mil)(1833mil,1390.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1859mil,1129mil)(1859mil,1364.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1846mil,1129mil)(1846mil,1377.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1937mil,1129mil)(1937mil,1286.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1963mil,1129mil)(1963mil,1260.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1950mil,1129mil)(1950mil,1273.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1898mil,1129mil)(1898mil,1325.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1924mil,1129mil)(1924mil,1299.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1911mil,1129mil)(1911mil,1312.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1326mil)(1897.5mil,1326mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1313mil)(1910.5mil,1313mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1193.945mil)(1822.11mil,1336.055mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1963mil,1353.5mil)(1963mil,1425.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1899.5mil,1417mil)(1971.224mil,1417mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1822.11mil,1222mil)(2001.5mil,1222mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1964.5mil,1352mil)(2036.224mil,1352mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1951.5mil,1365mil)(2023.224mil,1365mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1912.5mil,1404mil)(1984.224mil,1404mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1938.5mil,1378mil)(2010.224mil,1378mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1925.5mil,1391mil)(1997.224mil,1391mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1834.5mil,1482mil)(1906.224mil,1482mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1847.5mil,1469mil)(1919.224mil,1469mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1846mil,1470.5mil)(1846mil,1542.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1872mil,1444.5mil)(1872mil,1516.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1859mil,1457.5mil)(1859mil,1529.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1764.5mil,1459mil)(2062.102mil,1161.398mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1873.5mil,1443mil)(1945.224mil,1443mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1860.5mil,1456mil)(1932.224mil,1456mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1811mil,1505.5mil)(2093.957mil,1222.543mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1829.224mil,1559mil)(2047.102mil,1341.122mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1875.724mil,1605.5mil)(2088.653mil,1392.571mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1717mil,1534mil)(1854.224mil,1534mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1795.5mil,1521mil)(1867.224mil,1521mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1718mil,1547mil)(1841.224mil,1547mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1833mil,1483.5mil)(1833mil,1555.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1730.237mil,1559mil)(1829.224mil,1559mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1808.5mil,1508mil)(1880.224mil,1508mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1821.5mil,1495mil)(1893.224mil,1495mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1882.224mil,1599mil)(1969.724mil,1599mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1860.224mil,1621mil)(1875.724mil,1605.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1860.224mil,1621mil)(1875.724mil,1605.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1872mil,1609.224mil)(1872mil,1665.235mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1924mil,1392.5mil)(1924mil,1464.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1937mil,1379.5mil)(1937mil,1451.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1885mil,1431.5mil)(1885mil,1503.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1911mil,1405.5mil)(1911mil,1477.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1898mil,1418.5mil)(1898mil,1490.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1886.5mil,1430mil)(1958.224mil,1430mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1950mil,1366.5mil)(1950mil,1438.224mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1973.224mil,1508mil)(2051.435mil,1508mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1916.73mil,1651.995mil)(2041mil,1527.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1963mil,1518.224mil)(1963mil,1605.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1960.224mil,1521mil)(2046.692mil,1521mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1924mil,1557.224mil)(1924mil,1644.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1937mil,1544.224mil)(1937mil,1631.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1885mil,1596.224mil)(1885mil,1656.235mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1911mil,1570.224mil)(1911mil,1652.24mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1898mil,1583.224mil)(1898mil,1656.508mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1921.224mil,1560mil)(2008.724mil,1560mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1947.224mil,1534mil)(2034.724mil,1534mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1934.224mil,1547mil)(2021.724mil,1547mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1895.224mil,1586mil)(1982.724mil,1586mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1950mil,1531.224mil)(1950mil,1618.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1908.224mil,1573mil)(1995.724mil,1573mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1625mil)(1634mil,1625mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1612mil)(1626mil,1612mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1628mil,1681mil)(1642.545mil,1681mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1638mil,1629mil)(1638mil,1681mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1628mil,1681mil)(1642.545mil,1681mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1638mil)(1647mil,1638mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1626mil,1617mil)(1653mil,1644mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1664mil)(1685.456mil,1664mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1651mil,1642mil)(1651mil,1680.129mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1677mil)(1657mil,1677mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1742mil)(1567mil,1742mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1729mil)(1580mil,1729mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1755mil)(1561mil,1755mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1561mil,1748mil)(1578mil,1731mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1561mil,1748mil)(1578mil,1731mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1690mil)(1619mil,1690mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1611mil,1698mil)(1628mil,1681mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1611mil,1698mil)(1628mil,1681mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1703mil)(1606mil,1703mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1578mil,1731mil)(1611mil,1698mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1716mil)(1593mil,1716mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1690mil,1644mil)(1690mil,1662.55mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1691.638mil,1662.091mil)(1696.226mil,1662.52mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1664mil,1644mil)(1664mil,1671mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1677mil,1644mil)(1677mil,1669.479mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1686.914mil,1663.55mil)(1691.299mil,1662.129mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1653mil,1644mil)(1707mil,1644mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1720.571mil,1626.508mil)(1724.358mil,1623.339mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1696.226mil,1662.52mil)(1700.817mil,1662.885mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1703mil,1644mil)(1703mil,1663.481mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1729mil,1622mil)(1729mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1716mil,1635mil)(1716mil,1665.136mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1663mil,1671mil)(1675.166mil,1671mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1678.71mil,1668.062mil)(1682.216mil,1665.072mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1654.937mil,1679.063mil)(1663mil,1671mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1675.166mil,1671mil)(1678.71mil,1668.062mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1657.5mil,1753.5mil)(1663mil,1759mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1682.515mil,1664.908mil)(1686.914mil,1663.55mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1702.351mil,1663.34mil)(1707.472mil,1664.45mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1708.234mil,1664.563mil)(1717.299mil,1665.232mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1721.235mil,1745.091mil)(1725.519mil,1743.824mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1707mil,1759mil)(1720.752mil,1745.248mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1820mil)(1561mil,1820mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1807mil)(1561mil,1807mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1833mil)(1561mil,1833mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1561mil,1843mil)(1561mil,1877mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1561mil,1843mil)(1561mil,1877mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1768mil)(1561mil,1768mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1561mil,1748mil)(1561mil,1782mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1781mil)(1561mil,1781mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1794mil)(1561mil,1794mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1561mil,1748mil)(1561mil,1782mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1561mil,1782mil)(1561mil,1843mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1859mil)(1561mil,1859mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1846mil)(1561mil,1846mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1924mil)(1573.441mil,1924mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1872mil)(1561mil,1872mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1885mil)(1569mil,1885mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1898mil)(1582mil,1898mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1561mil,1877mil)(1578mil,1894mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1561mil,1877mil)(1578mil,1894mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1911mil)(1595mil,1911mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1578mil,1894mil)(1586mil,1902mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1573.441mil,1912.181mil)(1596.181mil,1912.181mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1643mil,1768mil)(1651mil,1768mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1651mil,1760mil)(1651mil,1768mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1629mil,1782mil)(1657.5mil,1753.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1631mil,1788mil)(1658mil,1761mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1638mil,1773mil)(1638mil,1781mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1663mil,1759mil)(1707mil,1759mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1716mil,1750mil)(1716mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1694.224mil,1759.276mil)(1725.224mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1658mil,1761mil)(1692.5mil,1761mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1729mil,1741.027mil)(1729mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1694.224mil,1759.276mil)(1725.224mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1629mil,1782mil)(1629mil,1843mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1631mil,1788mil)(1631mil,1842mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1586mil,1902mil)(1586mil,1912.181mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1586mil,1902mil)(1596.181mil,1912.181mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1586mil,1902mil)(1596.181mil,1912.181mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1629mil,1843mil)(1637mil,1851mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1630mil,1781mil)(1638mil,1781mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1631mil,1842mil)(1640mil,1851mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1676.559mil,1924mil)(1683mil,1924mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1721mil,1860mil)(1729mil,1868mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1721mil,1860mil)(1729mil,1868mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1781mil,1621mil)(1781mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1794mil,1621mil)(1794mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1742mil,1621mil)(1742mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1768mil,1621mil)(1768mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1755mil,1621mil)(1755mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1730.237mil,1621mil)(1829.224mil,1621mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1829.224mil,1621mil)(1860.224mil,1621mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1807mil,1621mil)(1807mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1833mil,1621mil)(1833mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1829.224mil,1621mil)(1860.224mil,1621mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1707mil,1644mil)(1729.917mil,1621.083mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1820mil,1621mil)(1820mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1723.93mil,1665.724mil)(1868.896mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1729.468mil,1740.628mil)(1732.941mil,1737.817mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1726.072mil,1743.524mil)(1729.468mil,1740.628mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1554mil,1651mil)(1917.724mil,1651mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1726mil,1625mil)(1943.724mil,1625mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1713mil,1638mil)(1930.724mil,1638mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1705.395mil,1664mil)(1873.339mil,1664mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1735.409mil,1733.724mil)(1868.896mil,1733.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1727.859mil,1742mil)(1881.836mil,1742mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1917.86mil,1652.153mil)(1923.224mil,1647.64mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1923.224mil,1647.64mil)(1926.52mil,1644.463mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1846mil,1621mil)(1846mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1859mil,1621mil)(1859mil,1665.724mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1869.224mil,1612mil)(1956.724mil,1612mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1972.519mil,1698.205mil)(2047.457mil,1623.268mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1973.28mil,1695.69mil)(1980.46mil,1687.991mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1963mil,1718.735mil)(1963mil,1742.653mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1972.23mil,1703mil)(2069mil,1703mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1966.226mil,1716mil)(2069mil,1716mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1924mil,1737.347mil)(1924mil,1742.653mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1937mil,1737.347mil)(1937mil,1742.653mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1867.457mil,1742.653mil)(1883.739mil,1742.653mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1872mil,1734.214mil)(1872mil,1742.653mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1911mil,1737.347mil)(1911mil,1742.653mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1908.522mil,1737.347mil)(1962.543mil,1737.347mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1962.543mil,1719.171mil)(1962.543mil,1737.347mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1962.543mil,1729mil)(2069mil,1729mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1899.444mil,1742.653mil)(1972.543mil,1742.653mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1950mil,1737.347mil)(1950mil,1742.653mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1901.558mil,1742mil)(2069mil,1742mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1742mil,1733.724mil)(1742mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1755mil,1733.724mil)(1755mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1739mil,1821.276mil)(1739mil,1842mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1755mil,1821.276mil)(1755mil,1894mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1742mil,1821.276mil)(1742mil,1881mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1711mil,1755mil)(1867.457mil,1755mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1768mil,1733.724mil)(1768mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1725.224mil,1759.276mil)(1867.457mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1739mil,1821.276mil)(1867.457mil,1821.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1768mil,1821.276mil)(1768mil,1907mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1739mil,1833mil)(1867.457mil,1833mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1721mil,1860mil)(1739mil,1842mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1729mil,1852mil)(1729mil,1868mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1729mil,1868mil)(1752mil,1891mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1752mil,1891mil)(1769mil,1908mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1752mil,1891mil)(1769mil,1908mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1722mil,1859mil)(1964mil,1859mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1735mil,1846mil)(1964mil,1846mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1733mil,1872mil)(1964mil,1872mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1746mil,1885mil)(1964mil,1885mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1759mil,1898mil)(1964mil,1898mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1769mil,1922.378mil)(1776.559mil,1922.378mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1820mil,1733.724mil)(1820mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1833mil,1733.724mil)(1833mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1781mil,1733.724mil)(1781mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1807mil,1733.724mil)(1807mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1794mil,1733.724mil)(1794mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1846mil,1733.724mil)(1846mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1859mil,1733.724mil)(1859mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1972.543mil,1755mil)(2069mil,1755mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1867.457mil,1742.653mil)(1867.457mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1972.543mil,1742.653mil)(1972.543mil,1759.276mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1975.5mil,1759.276mil)(1991mil,1774.776mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1867.457mil,1837.898mil)(1961.122mil,1837.898mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1867.457mil,1821.276mil)(1867.457mil,1837.898mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1769mil,1908mil)(1769mil,1922.378mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1964mil,1840.776mil)(1964mil,1884.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1769mil,1908mil)(1769mil,1922.378mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1769mil,1911mil)(1964mil,1911mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1975.5mil,1759.276mil)(1991mil,1774.776mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1961.122mil,1837.898mil)(1964mil,1840.776mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1776.559mil,1924mil)(1972.5mil,1924mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1964mil,1884.5mil)(1964mil,1915.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1964mil,1884.5mil)(1964mil,1915.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2015mil,1129mil)(2015mil,1208.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2028mil,1129mil)(2028mil,1195.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1976mil,1129mil)(1976mil,1247.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2002mil,1129mil)(2002mil,1221.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (1989mil,1129mil)(1989mil,1234.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2054mil,1129mil)(2054mil,1169.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2062.102mil,1129mil)(2062.102mil,1161.398mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2041mil,1129mil)(2041mil,1182.5mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2106mil,1222.543mil)(2106mil,1287.457mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2093.957mil,1222.543mil)(2152.653mil,1222.543mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2080mil,1236.5mil)(2080mil,1287.457mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2093mil,1223.5mil)(2093mil,1287.457mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2016.5mil,1300mil)(2047.102mil,1300mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2067mil,1249.5mil)(2067mil,1287.457mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2054mil,1262.5mil)(2054mil,1287.457mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2137.653mil,1287.457mil)(2142.347mil,1287.457mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2142.347mil,1287.457mil)(2232.898mil,1287.457mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2137.653mil,1287.457mil)(2142.347mil,1287.457mil)  Top Layer
+   Violation between Width Constraint: Polygon Track (2047.102mil,1287.457mil)(2137.653mil,1287.457mil)  Top Layer
+Rule Violations :365
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+   Violation between Hole Size Constraint (118.11mil > 100mil) : Pad Free-0(1690mil,4880mil)  Multi-Layer
+   Violation between Hole Size Constraint (118.11mil > 100mil) : Pad Free-0(5295mil,4855mil)  Multi-Layer
+   Violation between Hole Size Constraint (118.11mil > 100mil) : Pad Free-0(1680mil,1265mil)  Multi-Layer
+   Violation between Hole Size Constraint (118.11mil > 100mil) : Pad Free-0(5300mil,1255mil)  Multi-Layer
+Rule Violations :4
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+   Violation between Pad Free-0(1690mil,4880mil)  Multi-Layer and 
+                     Pad Free-30(1645mil,4955mil)  Multi-Layer
+   Violation between Pad Free-0(1690mil,4880mil)  Multi-Layer and 
+                     Pad Free-29(1710mil,4965mil)  Multi-Layer
+   Violation between Pad Free-0(5295mil,4855mil)  Multi-Layer and 
+                     Pad Free-22(5225mil,4905mil)  Multi-Layer
+   Violation between Pad Free-0(5295mil,4855mil)  Multi-Layer and 
+                     Pad Free-20(5250mil,4780mil)  Multi-Layer
+   Violation between Pad Free-0(5295mil,4855mil)  Multi-Layer and 
+                     Pad Free-18(5375mil,4825mil)  Multi-Layer
+   Violation between Pad Free-0(5295mil,4855mil)  Multi-Layer and 
+                     Pad Free-17(5360mil,4905mil)  Multi-Layer
+   Violation between Pad Free-0(5295mil,4855mil)  Multi-Layer and 
+                     Pad Free-16(5295mil,4940mil)  Multi-Layer
+   Violation between Pad Free-0(5300mil,1255mil)  Multi-Layer and 
+                     Pad Free-15(5235mil,1195mil)  Multi-Layer
+   Violation between Pad Free-0(5300mil,1255mil)  Multi-Layer and 
+                     Pad Free-12(5215mil,1260mil)  Multi-Layer
+   Violation between Pad Free-0(5300mil,1255mil)  Multi-Layer and 
+                     Pad Free-11(5235mil,1315mil)  Multi-Layer
+   Violation between Pad Free-0(5300mil,1255mil)  Multi-Layer and 
+                     Pad Free-10(5360mil,1190mil)  Multi-Layer
+   Violation between Pad Free-0(5300mil,1255mil)  Multi-Layer and 
+                     Pad Free-8(5300mil,1340mil)  Multi-Layer
+   Violation between Pad Free-0(1680mil,1265mil)  Multi-Layer and 
+                     Pad Free-7(1765mil,1260mil)  Multi-Layer
+   Violation between Pad Free-0(1680mil,1265mil)  Multi-Layer and 
+                     Pad Free-6(1730mil,1195mil)  Multi-Layer
+   Violation between Pad Free-0(1680mil,1265mil)  Multi-Layer and 
+                     Pad Free-2(1655mil,1350mil)  Multi-Layer
+   Violation between Pad Free-0(1680mil,1265mil)  Multi-Layer and 
+                     Pad Free-1(1730mil,1335mil)  Multi-Layer
+Rule Violations :16
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+   Violation between Via (2645mil,1550mil) Top Layer to Bottom Layer and 
+                     Pad HX1-5(2569.528mil,1535mil)  Top Layer
+   Violation between Pad U1-2(3300.905mil,2308.976mil)  Top Layer and 
+                     Pad U1-1(3300.905mil,2283.385mil)  Top Layer
+   Violation between Pad U1-3(3300.905mil,2334.566mil)  Top Layer and 
+                     Pad U1-2(3300.905mil,2308.976mil)  Top Layer
+   Violation between Pad U1-4(3300.905mil,2360.157mil)  Top Layer and 
+                     Pad U1-3(3300.905mil,2334.566mil)  Top Layer
+   Violation between Pad U1-5(3300.905mil,2385.748mil)  Top Layer and 
+                     Pad U1-4(3300.905mil,2360.157mil)  Top Layer
+   Violation between Pad U1-6(3300.905mil,2411.338mil)  Top Layer and 
+                     Pad U1-5(3300.905mil,2385.748mil)  Top Layer
+   Violation between Pad U1-7(3300.905mil,2436.929mil)  Top Layer and 
+                     Pad U1-6(3300.905mil,2411.338mil)  Top Layer
+   Violation between Pad U1-8(3300.905mil,2462.519mil)  Top Layer and 
+                     Pad U1-7(3300.905mil,2436.929mil)  Top Layer
+   Violation between Pad U1-9(3300.905mil,2488.11mil)  Top Layer and 
+                     Pad U1-8(3300.905mil,2462.519mil)  Top Layer
+   Violation between Pad U1-10(3300.905mil,2513.7mil)  Top Layer and 
+                     Pad U1-9(3300.905mil,2488.11mil)  Top Layer
+   Violation between Pad U1-11(3300.905mil,2539.291mil)  Top Layer and 
+                     Pad U1-10(3300.905mil,2513.7mil)  Top Layer
+   Violation between Pad U1-12(3300.905mil,2564.881mil)  Top Layer and 
+                     Pad U1-11(3300.905mil,2539.291mil)  Top Layer
+   Violation between Pad U1-13(3300.905mil,2590.472mil)  Top Layer and 
+                     Pad U1-12(3300.905mil,2564.881mil)  Top Layer
+   Violation between Pad U1-14(3300.905mil,2616.063mil)  Top Layer and 
+                     Pad U1-13(3300.905mil,2590.472mil)  Top Layer
+   Violation between Pad U1-27(3015.471mil,2308.976mil)  Top Layer and 
+                     Pad U1-28(3015.471mil,2283.385mil)  Top Layer
+   Violation between Pad U1-26(3015.471mil,2334.566mil)  Top Layer and 
+                     Pad U1-27(3015.471mil,2308.976mil)  Top Layer
+   Violation between Pad U1-25(3015.471mil,2360.157mil)  Top Layer and 
+                     Pad U1-26(3015.471mil,2334.566mil)  Top Layer
+   Violation between Pad U1-24(3015.471mil,2385.748mil)  Top Layer and 
+                     Pad U1-25(3015.471mil,2360.157mil)  Top Layer
+   Violation between Pad U1-23(3015.471mil,2411.338mil)  Top Layer and 
+                     Pad U1-24(3015.471mil,2385.748mil)  Top Layer
+   Violation between Pad U1-22(3015.471mil,2436.929mil)  Top Layer and 
+                     Pad U1-23(3015.471mil,2411.338mil)  Top Layer
+   Violation between Pad U1-21(3015.471mil,2462.519mil)  Top Layer and 
+                     Pad U1-22(3015.471mil,2436.929mil)  Top Layer
+   Violation between Pad U1-20(3015.471mil,2488.11mil)  Top Layer and 
+                     Pad U1-21(3015.471mil,2462.519mil)  Top Layer
+   Violation between Pad U1-19(3015.471mil,2513.7mil)  Top Layer and 
+                     Pad U1-20(3015.471mil,2488.11mil)  Top Layer
+   Violation between Pad U1-18(3015.471mil,2539.291mil)  Top Layer and 
+                     Pad U1-19(3015.471mil,2513.7mil)  Top Layer
+   Violation between Pad U1-17(3015.471mil,2564.881mil)  Top Layer and 
+                     Pad U1-18(3015.471mil,2539.291mil)  Top Layer
+   Violation between Pad U1-16(3015.471mil,2590.472mil)  Top Layer and 
+                     Pad U1-17(3015.471mil,2564.881mil)  Top Layer
+   Violation between Pad U1-15(3015.471mil,2616.063mil)  Top Layer and 
+                     Pad U1-16(3015.471mil,2590.472mil)  Top Layer
+   Violation between Via (4190mil,2165mil) Top Layer to Bottom Layer and 
+                     Pad R17-2(4120mil,2175.276mil)  Top Layer
+   Violation between Pad U2-63(3796.685mil,3407.637mil)  Top Layer and 
+                     Pad U2-64(3782.766mil,3421.557mil)  Top Layer
+   Violation between Pad U2-62(3810.604mil,3393.718mil)  Top Layer and 
+                     Pad U2-63(3796.685mil,3407.637mil)  Top Layer
+   Violation between Pad U2-61(3824.524mil,3379.799mil)  Top Layer and 
+                     Pad U2-62(3810.604mil,3393.718mil)  Top Layer
+   Violation between Pad U2-60(3838.443mil,3365.879mil)  Top Layer and 
+                     Pad U2-61(3824.524mil,3379.799mil)  Top Layer
+   Violation between Pad U2-59(3852.363mil,3351.96mil)  Top Layer and 
+                     Pad U2-60(3838.443mil,3365.879mil)  Top Layer
+   Violation between Pad U2-58(3866.282mil,3338.041mil)  Top Layer and 
+                     Pad U2-59(3852.363mil,3351.96mil)  Top Layer
+   Violation between Pad U2-57(3880.202mil,3324.121mil)  Top Layer and 
+                     Pad U2-58(3866.282mil,3338.041mil)  Top Layer
+   Violation between Pad U2-56(3894.121mil,3310.202mil)  Top Layer and 
+                     Pad U2-57(3880.202mil,3324.121mil)  Top Layer
+   Violation between Pad U2-55(3908.041mil,3296.282mil)  Top Layer and 
+                     Pad U2-56(3894.121mil,3310.202mil)  Top Layer
+   Violation between Pad U2-54(3921.96mil,3282.363mil)  Top Layer and 
+                     Pad U2-55(3908.041mil,3296.282mil)  Top Layer
+   Violation between Pad U2-53(3935.879mil,3268.443mil)  Top Layer and 
+                     Pad U2-54(3921.96mil,3282.363mil)  Top Layer
+   Violation between Pad U2-52(3949.799mil,3254.524mil)  Top Layer and 
+                     Pad U2-53(3935.879mil,3268.443mil)  Top Layer
+   Violation between Pad U2-51(3963.718mil,3240.604mil)  Top Layer and 
+                     Pad U2-52(3949.799mil,3254.524mil)  Top Layer
+   Violation between Pad U2-50(3977.638mil,3226.685mil)  Top Layer and 
+                     Pad U2-51(3963.718mil,3240.604mil)  Top Layer
+   Violation between Pad U2-49(3991.557mil,3212.766mil)  Top Layer and 
+                     Pad U2-50(3977.638mil,3226.685mil)  Top Layer
+   Violation between Pad U2-47(3977.637mil,3083.315mil)  Top Layer and 
+                     Pad U2-48(3991.557mil,3097.234mil)  Top Layer
+   Violation between Pad U2-46(3963.718mil,3069.396mil)  Top Layer and 
+                     Pad U2-47(3977.637mil,3083.315mil)  Top Layer
+   Violation between Pad U2-45(3949.799mil,3055.476mil)  Top Layer and 
+                     Pad U2-46(3963.718mil,3069.396mil)  Top Layer
+   Violation between Pad U2-44(3935.879mil,3041.557mil)  Top Layer and 
+                     Pad U2-45(3949.799mil,3055.476mil)  Top Layer
+   Violation between Pad U2-43(3921.96mil,3027.637mil)  Top Layer and 
+                     Pad U2-44(3935.879mil,3041.557mil)  Top Layer
+   Violation between Pad U2-43(3921.96mil,3027.637mil)  Top Layer and 
+                     Pad U2-42(3908.041mil,3013.718mil)  Top Layer
+   Violation between Pad U2-41(3894.121mil,2999.798mil)  Top Layer and 
+                     Pad U2-42(3908.041mil,3013.718mil)  Top Layer
+   Violation between Pad U2-36(3824.524mil,2930.201mil)  Top Layer and 
+                     Pad U2-37(3838.443mil,2944.121mil)  Top Layer
+   Violation between Pad U2-38(3852.363mil,2958.04mil)  Top Layer and 
+                     Pad U2-37(3838.443mil,2944.121mil)  Top Layer
+   Violation between Pad U2-35(3810.604mil,2916.282mil)  Top Layer and 
+                     Pad U2-36(3824.524mil,2930.201mil)  Top Layer
+   Violation between Pad U2-34(3796.685mil,2902.362mil)  Top Layer and 
+                     Pad U2-35(3810.604mil,2916.282mil)  Top Layer
+   Violation between Pad U2-33(3782.766mil,2888.443mil)  Top Layer and 
+                     Pad U2-34(3796.685mil,2902.362mil)  Top Layer
+   Violation between Pad U2-31(3653.315mil,2902.362mil)  Top Layer and 
+                     Pad U2-32(3667.234mil,2888.443mil)  Top Layer
+   Violation between Pad U2-30(3639.396mil,2916.282mil)  Top Layer and 
+                     Pad U2-31(3653.315mil,2902.362mil)  Top Layer
+   Violation between Pad U2-29(3625.476mil,2930.201mil)  Top Layer and 
+                     Pad U2-30(3639.396mil,2916.282mil)  Top Layer
+   Violation between Pad U2-28(3611.557mil,2944.121mil)  Top Layer and 
+                     Pad U2-29(3625.476mil,2930.201mil)  Top Layer
+   Violation between Pad U2-27(3597.637mil,2958.04mil)  Top Layer and 
+                     Pad U2-28(3611.557mil,2944.121mil)  Top Layer
+   Violation between Pad U2-26(3583.718mil,2971.959mil)  Top Layer and 
+                     Pad U2-27(3597.637mil,2958.04mil)  Top Layer
+   Violation between Pad U2-25(3569.798mil,2985.879mil)  Top Layer and 
+                     Pad U2-26(3583.718mil,2971.959mil)  Top Layer
+   Violation between Pad U2-24(3555.879mil,2999.798mil)  Top Layer and 
+                     Pad U2-25(3569.798mil,2985.879mil)  Top Layer
+   Violation between Pad U2-23(3541.959mil,3013.718mil)  Top Layer and 
+                     Pad U2-24(3555.879mil,2999.798mil)  Top Layer
+   Violation between Pad U2-22(3528.04mil,3027.637mil)  Top Layer and 
+                     Pad U2-23(3541.959mil,3013.718mil)  Top Layer
+   Violation between Pad U2-21(3514.121mil,3041.557mil)  Top Layer and 
+                     Pad U2-22(3528.04mil,3027.637mil)  Top Layer
+   Violation between Pad U2-20(3500.201mil,3055.476mil)  Top Layer and 
+                     Pad U2-21(3514.121mil,3041.557mil)  Top Layer
+   Violation between Pad U2-19(3486.282mil,3069.396mil)  Top Layer and 
+                     Pad U2-20(3500.201mil,3055.476mil)  Top Layer
+   Violation between Pad U2-18(3472.363mil,3083.315mil)  Top Layer and 
+                     Pad U2-19(3486.282mil,3069.396mil)  Top Layer
+   Violation between Pad U2-17(3458.443mil,3097.234mil)  Top Layer and 
+                     Pad U2-18(3472.363mil,3083.315mil)  Top Layer
+   Violation between Pad U2-15(3472.362mil,3226.685mil)  Top Layer and 
+                     Pad U2-16(3458.443mil,3212.766mil)  Top Layer
+   Violation between Pad U2-14(3486.282mil,3240.604mil)  Top Layer and 
+                     Pad U2-15(3472.362mil,3226.685mil)  Top Layer
+   Violation between Pad U2-13(3500.201mil,3254.524mil)  Top Layer and 
+                     Pad U2-14(3486.282mil,3240.604mil)  Top Layer
+   Violation between Pad U2-12(3514.121mil,3268.443mil)  Top Layer and 
+                     Pad U2-13(3500.201mil,3254.524mil)  Top Layer
+   Violation between Pad U2-11(3528.04mil,3282.363mil)  Top Layer and 
+                     Pad U2-12(3514.121mil,3268.443mil)  Top Layer
+   Violation between Pad U2-5(3611.557mil,3365.879mil)  Top Layer and 
+                     Pad U2-6(3597.637mil,3351.96mil)  Top Layer
+   Violation between Pad U2-7(3583.718mil,3338.041mil)  Top Layer and 
+                     Pad U2-6(3597.637mil,3351.96mil)  Top Layer
+   Violation between Via (3630mil,3290mil) Top Layer to Bottom Layer and 
+                     Pad U2-6(3597.637mil,3351.96mil)  Top Layer
+   Violation between Pad U2-4(3625.476mil,3379.799mil)  Top Layer and 
+                     Pad U2-5(3611.557mil,3365.879mil)  Top Layer
+   Violation between Pad U2-3(3639.396mil,3393.718mil)  Top Layer and 
+                     Pad U2-4(3625.476mil,3379.799mil)  Top Layer
+   Violation between Pad U2-2(3653.315mil,3407.637mil)  Top Layer and 
+                     Pad U2-3(3639.396mil,3393.718mil)  Top Layer
+   Violation between Pad U2-1(3667.234mil,3421.557mil)  Top Layer and 
+                     Pad U2-2(3653.315mil,3407.637mil)  Top Layer
+   Violation between Pad U2-41(3894.121mil,2999.798mil)  Top Layer and 
+                     Pad U2-40(3880.202mil,2985.879mil)  Top Layer
+   Violation between Pad U2-39(3866.282mil,2971.959mil)  Top Layer and 
+                     Pad U2-40(3880.202mil,2985.879mil)  Top Layer
+   Violation between Pad U2-38(3852.363mil,2958.04mil)  Top Layer and 
+                     Pad U2-39(3866.282mil,2971.959mil)  Top Layer
+   Violation between Pad U2-8(3569.798mil,3324.121mil)  Top Layer and 
+                     Pad U2-7(3583.718mil,3338.041mil)  Top Layer
+   Violation between Via (3630mil,3290mil) Top Layer to Bottom Layer and 
+                     Pad U2-7(3583.718mil,3338.041mil)  Top Layer
+   Violation between Pad U2-8(3569.798mil,3324.121mil)  Top Layer and 
+                     Pad U2-9(3555.879mil,3310.202mil)  Top Layer
+   Violation between Pad U2-10(3541.959mil,3296.282mil)  Top Layer and 
+                     Pad U2-9(3555.879mil,3310.202mil)  Top Layer
+   Violation between Pad U2-11(3528.04mil,3282.363mil)  Top Layer and 
+                     Pad U2-10(3541.959mil,3296.282mil)  Top Layer
+   Violation between Via (3630mil,3290mil) Top Layer to Bottom Layer and 
+                     Pad U2-8(3569.798mil,3324.121mil)  Top Layer
+   Violation between Via (2965mil,2160mil) Top Layer to Bottom Layer and 
+                     Pad SD1-0(2940mil,2070mil)  Bottom Layer
+   Violation between Via (4805mil,2725mil) Top Layer to Bottom Layer and 
+                     Via (4840mil,2670mil) Top Layer to Bottom Layer
+   Violation between Via (4725mil,2830mil) Top Layer to Bottom Layer and 
+                     Via (4720mil,2765mil) Top Layer to Bottom Layer
+   Violation between Via (3765mil,3560mil) Top Layer to Bottom Layer and 
+                     Via (3720mil,3605mil) Top Layer to Bottom Layer
+   Violation between Via (3585mil,3225mil) Top Layer to Bottom Layer and 
+                     Via (3650mil,3216.081mil) Top Layer to Bottom Layer
+   Violation between Via (4050mil,3300mil) Top Layer to Bottom Layer and 
+                     Via (4020mil,3360mil) Top Layer to Bottom Layer
+Rule Violations :97
+
+Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+   Violation between Pad B1-2(4590mil,3710mil)  Bottom Layer and 
+                     Arc (4569.37mil,3331.575mil)  Bottom Overlay
+   Violation between Text "smritipertor" (4160mil,3985mil)  Bottom Overlay and 
+                     Pad D2-2(4003.188mil,4070mil)  Multi-Layer
+   Violation between Track (2050mil,2200.248mil)(2050mil,2305mil)  Top Overlay and 
+                     Pad P6-5(2010mil,2255mil)  Multi-Layer
+   Violation between Text "R8" (4145mil,1820mil)  Top Overlay and 
+                     Pad R19-1(4115mil,1869.724mil)  Top Layer
+   Violation between Track (3890mil,1840mil)(3890mil,2120mil)  Bottom Overlay and 
+                     Pad SD1-0(3940mil,2080mil)  Bottom Layer
+   Violation between Track (3000mil,2120mil)(3890mil,2120mil)  Bottom Overlay and 
+                     Pad SD1-0(3940mil,2080mil)  Bottom Layer
+   Violation between Track (3000mil,1140mil)(3000mil,2120mil)  Bottom Overlay and 
+                     Pad SD1-0(2940mil,2070mil)  Bottom Layer
+   Violation between Track (3000mil,2120mil)(3890mil,2120mil)  Bottom Overlay and 
+                     Pad SD1-0(2940mil,2070mil)  Bottom Layer
+   Violation between Track (3000mil,1140mil)(3000mil,2120mil)  Bottom Overlay and 
+                     Pad SD1-0(2950mil,1220mil)  Bottom Layer
+   Violation between Track (3990mil,1140mil)(3990mil,1830mil)  Bottom Overlay and 
+                     Pad SD1-0(4050mil,1230mil)  Bottom Layer
+Rule Violations :10
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+   Violation between Text "R13" (4810mil,4575mil)  Top Overlay and 
+                     Track (4883.74mil,4652.52mil)(4883.74mil,4869.056mil)  Top Overlay
+   Violation between Text "R13" (4810mil,4575mil)  Top Overlay and 
+                     Track (4529.41mil,4652.52mil)(4883.74mil,4652.52mil)  Top Overlay
+   Violation between Text "GND/NC/D+/D-/VCC" (1555mil,2125mil)  Top Overlay and 
+                     Track (1550mil,2110mil)(2860mil,2110mil)  Top Overlay
+   Violation between Text "Q1" (2235.689mil,2064.5mil)  Top Overlay and 
+                     Track (1550mil,2110mil)(2860mil,2110mil)  Top Overlay
+   Violation between Text "R2" (1586mil,2034mil)  Top Overlay and 
+                     Track (1550mil,2110mil)(2860mil,2110mil)  Top Overlay
+   Violation between Text "GND/NC/D+/D-/VCC" (1555mil,2125mil)  Top Overlay and 
+                     Track (1525mil,2135mil)(1550mil,2110mil)  Top Overlay
+Rule Violations :6
+
+Processing Rule : Silk primitive without silk layer
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Rule
+Rule Violations :0
+
+
+Violations Detected : 500
+Time Elapsed        : 00:00:01

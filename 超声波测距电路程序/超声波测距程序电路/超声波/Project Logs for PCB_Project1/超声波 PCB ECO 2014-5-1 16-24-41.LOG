@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=RW Pin=CHAZHENG-3X1-2
+Removed Pin From Net: NetName=Net51MCU_27 Pin=Q?-1
+Removed Pin From Net: NetName=VCC Pin=Q?-2
+Removed Pin From Net: NetName=NetFM_1 Pin=Q?-3
+Change Component DesignItemId : Designator=Q? Old DesignItemId=Diac-NPN New DesignItemId=2N3904
+Change Component Footprint: Designator=Q? Old Footprint=SFM-T3/X1.6V New Footprint=TO-92A
+Change Component Comment : Designator=Q? Old Comment=Diac-NPN New Comment=2N3904
+Added Pin To Net: NetName=NetFM_1 Pin=Q?-1
+Added Pin To Net: NetName=Net51MCU_27 Pin=Q?-2
+Added Pin To Net: NetName=VCC Pin=Q?-3
+Added Pin To Net: NetName=Net*_3 Pin=*-3
+Added Pin To Net: NetName=Net*_3 Pin=CHAZHENG-3X1-2
+Added Net: Name=Net*_3
+Added Room: Name=³¬Éù²¨ÏµÍ³

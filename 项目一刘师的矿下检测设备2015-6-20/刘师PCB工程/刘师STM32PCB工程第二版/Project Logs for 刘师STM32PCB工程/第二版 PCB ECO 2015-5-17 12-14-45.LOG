@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=VCC5 Pin=BEEF1-2
+Removed Pin From Net: NetName=GND Pin=Q2-3
+Added Pin To Net: NetName=GND Pin=Q2-1
+Added Pin To Net: NetName=VCC5 Pin=Q2-3
+Added Room: Name=U_ht7111
+Added Room: Name=U_刘师STM32
+Added Room: Name=U_电源2
+Added Room: Name=U_电源

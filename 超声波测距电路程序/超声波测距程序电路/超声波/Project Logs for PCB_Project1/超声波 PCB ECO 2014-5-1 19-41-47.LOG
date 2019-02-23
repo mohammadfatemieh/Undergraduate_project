@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=RX2 Pin=51MCU-3
+Removed Pin From Net: NetName=TX2 Pin=51MCU-4
+Removed Pin From Net: NetName=TX4 Pin=51MCU-21
+Removed Pin From Net: NetName=RX4 Pin=51MCU-22
+Added Pin To Net: NetName=TX2 Pin=51MCU-3
+Added Pin To Net: NetName=RX2 Pin=51MCU-4
+Added Pin To Net: NetName=RX4 Pin=51MCU-21
+Added Pin To Net: NetName=TX4 Pin=51MCU-22
+Added Room: Name=³¬Éù²¨ÏµÍ³

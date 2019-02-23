@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=NetB3_3 Pin=B3-3
+Removed Pin From Net: NetName=GND Pin=B3-5
+Removed Pin From Net: NetName=NetB3_6 Pin=SOURCE-1
+Added Pin To Net: NetName=GND Pin=B3-3
+Added Pin To Net: NetName=NetB3_3 Pin=B3-4
+Added Pin To Net: NetName=NetB3_6 Pin=SOURCE-2
+Change Net Name : Old Net Name=NetB3_3 New Net Name=NetB3_4
+Added Pin To Net: NetName=NetB3_5 Pin=B3-5
+Added Pin To Net: NetName=NetB3_5 Pin=SOURCE-1
+Added Net: Name=NetB3_5
+Added Room: Name=U_ht7111
+Added Room: Name=U_PL2303
+Added Room: Name=U_刘师STM32
+Added Room: Name=U_电源2
+Added Room: Name=U_电源

@@ -1,0 +1,54 @@
+Added Pin To Net: NetName=GND Pin=c1-1
+Added Pin To Net: NetName=VCC5 Pin=c1-2
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=NetC4_1 Pin=C4-1
+Added Pin To Net: NetName=NetC4_2 Pin=C4-2
+Added Pin To Net: NetName=VCC5 Pin=HX1-1
+Added Pin To Net: NetName=NetHX1_2 Pin=HX1-2
+Added Pin To Net: NetName=NetC2_2 Pin=HX1-3
+Added Pin To Net: NetName=NetHX1_4 Pin=HX1-4
+Added Pin To Net: NetName=GND Pin=HX1-5
+Added Pin To Net: NetName=NetC3_2 Pin=HX1-6
+Added Pin To Net: NetName=NetC4_2 Pin=HX1-7
+Added Pin To Net: NetName=NetC4_1 Pin=HX1-8
+Added Pin To Net: NetName=GND Pin=HX1-9
+Added Pin To Net: NetName=GND Pin=HX1-10
+Added Pin To Net: NetName=SCLK Pin=HX1-11
+Added Pin To Net: NetName=DATA Pin=HX1-12
+Added Pin To Net: NetName=GND Pin=HX1-14
+Added Pin To Net: NetName=GND Pin=HX1-15
+Added Pin To Net: NetName=VCC5 Pin=HX1-16
+Added Pin To Net: NetName=GND Pin=P4-1
+Added Pin To Net: NetName=NetC2_2 Pin=P4-2
+Added Pin To Net: NetName=NetP5_1 Pin=P5-1
+Added Pin To Net: NetName=NetP5_2 Pin=P5-2
+Added Pin To Net: NetName=NetC2_2 Pin=Q1-1
+Added Pin To Net: NetName=NetQ1_2 Pin=Q1-2
+Added Pin To Net: NetName=VCC5 Pin=Q1-3
+Added Pin To Net: NetName=NetHX1_2 Pin=R3-1
+Added Pin To Net: NetName=NetQ1_2 Pin=R3-2
+Added Pin To Net: NetName=NetHX1_4 Pin=R4-1
+Added Pin To Net: NetName=NetC2_2 Pin=R4-2
+Added Pin To Net: NetName=GND Pin=R5-1
+Added Pin To Net: NetName=NetHX1_4 Pin=R5-2
+Added Pin To Net: NetName=NetC4_2 Pin=R6-1
+Added Pin To Net: NetName=NetP5_2 Pin=R6-2
+Added Pin To Net: NetName=NetC4_1 Pin=R7-1
+Added Pin To Net: NetName=NetP5_1 Pin=R7-2
+Added Member To Class: ClassName=U_ht7111 Member=Component c1 10uf
+Added Member To Class: ClassName=U_ht7111 Member=Component C2 10uf
+Added Member To Class: ClassName=U_ht7111 Member=Component C3 0.1uf
+Added Member To Class: ClassName=U_ht7111 Member=Component C4 0.1uf
+Added Member To Class: ClassName=U_ht7111 Member=Component HX1 HX711
+Added Member To Class: ClassName=U_ht7111 Member=Component P4 P
+Added Member To Class: ClassName=U_ht7111 Member=Component P5 S
+Added Member To Class: ClassName=U_ht7111 Member=Component Q1 S855X
+Added Member To Class: ClassName=U_ht7111 Member=Component R3 4.7K
+Added Member To Class: ClassName=U_ht7111 Member=Component R4 1K
+Added Member To Class: ClassName=U_ht7111 Member=Component R5 3K
+Added Member To Class: ClassName=U_ht7111 Member=Component R6 1k
+Added Member To Class: ClassName=U_ht7111 Member=Component R7 1k
+Added Room: Name=U_ht7111

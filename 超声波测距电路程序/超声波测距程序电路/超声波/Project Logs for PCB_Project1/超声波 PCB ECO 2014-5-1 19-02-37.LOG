@@ -1,0 +1,149 @@
+Added Component: Designator=*(CHAZHEN40X1 - duplicate)
+Added Component: Designator=51MCU(51MCU - duplicate)
+Added Component: Designator=11111(FWSW)
+Added Component: Designator=cao1(HEADER-1x5)
+Added Component: Designator=cao2(HEADER-1x5)
+Added Component: Designator=cao3(HEADER-1x5)
+Added Component: Designator=cao4(HEADER-1x5)
+Added Component: Designator=CAP1(Cap)
+Added Component: Designator=CAP2(Cap)
+Added Component: Designator=CAP3(Cap)
+Added Component: Designator=CHAZHENG9X1(CHAZHEN9X1)
+Added Component: Designator=CHAZHENG-3X1(chazhen-3-1)
+Added Component: Designator=D?(HEADER2x1)
+Added Component: Designator=FM(FM)
+Added Component: Designator=Q?(TO-92A)
+Added Component: Designator=R2(AXIAL-0.5)
+Added Component: Designator=R4(AXIAL-0.5)
+Added Component: Designator=S000(DPDT-6)
+Added Component: Designator=usb(USB-DIP)
+Added Component: Designator=xtal(XTAL_US)
+Added Pin To Net: NetName=GND Pin=*-1
+Added Pin To Net: NetName=VCC Pin=*-2
+Added Pin To Net: NetName=Net*_3 Pin=*-3
+Added Pin To Net: NetName=RS Pin=*-4
+Added Pin To Net: NetName=RW Pin=*-5
+Added Pin To Net: NetName=LCDEN Pin=*-6
+Added Pin To Net: NetName=D0 Pin=*-7
+Added Pin To Net: NetName=D1 Pin=*-8
+Added Pin To Net: NetName=D2 Pin=*-9
+Added Pin To Net: NetName=D3 Pin=*-10
+Added Pin To Net: NetName=D4 Pin=*-11
+Added Pin To Net: NetName=D5 Pin=*-12
+Added Pin To Net: NetName=D6 Pin=*-13
+Added Pin To Net: NetName=D7 Pin=*-14
+Added Pin To Net: NetName=P3.1 Pin=*-15
+Added Pin To Net: NetName=P30 Pin=*-16
+Added Pin To Net: NetName=P15 Pin=*-17
+Added Pin To Net: NetName=Net*_18 Pin=*-18
+Added Pin To Net: NetName=VCC Pin=*-19
+Added Pin To Net: NetName=GND Pin=*-20
+Added Pin To Net: NetName=TX1 Pin=51MCU-1
+Added Pin To Net: NetName=RX1 Pin=51MCU-2
+Added Pin To Net: NetName=RX2 Pin=51MCU-3
+Added Pin To Net: NetName=TX2 Pin=51MCU-4
+Added Pin To Net: NetName=P15 Pin=51MCU-6
+Added Pin To Net: NetName=Net51MCU_9 Pin=51MCU-9
+Added Pin To Net: NetName=P30 Pin=51MCU-10
+Added Pin To Net: NetName=P3.1 Pin=51MCU-11
+Added Pin To Net: NetName=LCDEN Pin=51MCU-14
+Added Pin To Net: NetName=RS Pin=51MCU-15
+Added Pin To Net: NetName=RW Pin=51MCU-16
+Added Pin To Net: NetName=Net51MCU_18 Pin=51MCU-18
+Added Pin To Net: NetName=Net51MCU_19 Pin=51MCU-19
+Added Pin To Net: NetName=GND Pin=51MCU-20
+Added Pin To Net: NetName=TX4 Pin=51MCU-21
+Added Pin To Net: NetName=RX4 Pin=51MCU-22
+Added Pin To Net: NetName=TX3 Pin=51MCU-23
+Added Pin To Net: NetName=RX3 Pin=51MCU-24
+Added Pin To Net: NetName=Net51MCU_27 Pin=51MCU-27
+Added Pin To Net: NetName=VCC Pin=51MCU-31
+Added Pin To Net: NetName=D7 Pin=51MCU-32
+Added Pin To Net: NetName=D6 Pin=51MCU-33
+Added Pin To Net: NetName=D5 Pin=51MCU-34
+Added Pin To Net: NetName=D4 Pin=51MCU-35
+Added Pin To Net: NetName=D3 Pin=51MCU-36
+Added Pin To Net: NetName=D2 Pin=51MCU-37
+Added Pin To Net: NetName=D1 Pin=51MCU-38
+Added Pin To Net: NetName=D0 Pin=51MCU-39
+Added Pin To Net: NetName=VCC Pin=51MCU-40
+Added Pin To Net: NetName=VCC Pin=11111-2
+Added Pin To Net: NetName=Net51MCU_9 Pin=11111-4
+Added Pin To Net: NetName=VCC Pin=cao1-1
+Added Pin To Net: NetName=TX1 Pin=cao1-2
+Added Pin To Net: NetName=RX1 Pin=cao1-3
+Added Pin To Net: NetName=GND Pin=cao1-4
+Added Pin To Net: NetName=GND Pin=cao1-5
+Added Pin To Net: NetName=VCC Pin=cao2-1
+Added Pin To Net: NetName=TX2 Pin=cao2-2
+Added Pin To Net: NetName=RX2 Pin=cao2-3
+Added Pin To Net: NetName=GND Pin=cao2-4
+Added Pin To Net: NetName=GND Pin=cao2-5
+Added Pin To Net: NetName=VCC Pin=cao3-1
+Added Pin To Net: NetName=TX3 Pin=cao3-2
+Added Pin To Net: NetName=RX3 Pin=cao3-3
+Added Pin To Net: NetName=GND Pin=cao3-4
+Added Pin To Net: NetName=GND Pin=cao3-5
+Added Pin To Net: NetName=VCC Pin=cao4-1
+Added Pin To Net: NetName=TX4 Pin=cao4-2
+Added Pin To Net: NetName=RX4 Pin=cao4-3
+Added Pin To Net: NetName=GND Pin=cao4-4
+Added Pin To Net: NetName=GND Pin=cao4-5
+Added Pin To Net: NetName=VCC Pin=CAP1-1
+Added Pin To Net: NetName=Net51MCU_9 Pin=CAP1-2
+Added Pin To Net: NetName=GND Pin=CAP2-1
+Added Pin To Net: NetName=Net51MCU_18 Pin=CAP2-2
+Added Pin To Net: NetName=Net51MCU_19 Pin=CAP3-1
+Added Pin To Net: NetName=GND Pin=CAP3-2
+Added Pin To Net: NetName=VCC Pin=CHAZHENG9X1-1
+Added Pin To Net: NetName=D0 Pin=CHAZHENG9X1-2
+Added Pin To Net: NetName=D1 Pin=CHAZHENG9X1-3
+Added Pin To Net: NetName=D2 Pin=CHAZHENG9X1-4
+Added Pin To Net: NetName=D3 Pin=CHAZHENG9X1-5
+Added Pin To Net: NetName=D4 Pin=CHAZHENG9X1-6
+Added Pin To Net: NetName=D5 Pin=CHAZHENG9X1-7
+Added Pin To Net: NetName=D6 Pin=CHAZHENG9X1-8
+Added Pin To Net: NetName=D7 Pin=CHAZHENG9X1-9
+Added Pin To Net: NetName=VCC Pin=CHAZHENG-3X1-1
+Added Pin To Net: NetName=Net*_3 Pin=CHAZHENG-3X1-2
+Added Pin To Net: NetName=Net*_18 Pin=CHAZHENG-3X1-3
+Added Pin To Net: NetName=VCC Pin=D?-1
+Added Pin To Net: NetName=NetFM_1 Pin=FM-1
+Added Pin To Net: NetName=GND Pin=FM-2
+Added Pin To Net: NetName=NetFM_1 Pin=Q?-1
+Added Pin To Net: NetName=Net51MCU_27 Pin=Q?-2
+Added Pin To Net: NetName=VCC Pin=Q?-3
+Added Pin To Net: NetName=GND Pin=R2-1
+Added Pin To Net: NetName=Net51MCU_9 Pin=R2-2
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=VCC Pin=S000-2
+Added Pin To Net: NetName=GND Pin=usb-4
+Added Pin To Net: NetName=Net51MCU_19 Pin=xtal-1
+Added Pin To Net: NetName=Net51MCU_18 Pin=xtal-2
+Added Pin To Net: NetName=NetD?_2 Pin=D?-2
+Added Pin To Net: NetName=NetD?_2 Pin=R4-2
+Added Net: Name=NetD?_2
+Added Pin To Net: NetName=NetS000_1 Pin=S000-1
+Added Pin To Net: NetName=NetS000_1 Pin=usb-1
+Added Net: Name=NetS000_1
+Added Member To Class: ClassName=超声波系统 Member=Component * CHAZHENG20X1
+Added Member To Class: ClassName=超声波系统 Member=Component 51MCU
+Added Member To Class: ClassName=超声波系统 Member=Component 11111 FWSW
+Added Member To Class: ClassName=超声波系统 Member=Component cao1 chazhen5x1
+Added Member To Class: ClassName=超声波系统 Member=Component cao2 chazhen5x1
+Added Member To Class: ClassName=超声波系统 Member=Component cao3 chazhen5x1
+Added Member To Class: ClassName=超声波系统 Member=Component cao4 chazhen5x1
+Added Member To Class: ClassName=超声波系统 Member=Component CAP1 22uf
+Added Member To Class: ClassName=超声波系统 Member=Component CAP2 30pf
+Added Member To Class: ClassName=超声波系统 Member=Component CAP3 30pf
+Added Member To Class: ClassName=超声波系统 Member=Component CHAZHENG9X1
+Added Member To Class: ClassName=超声波系统 Member=Component CHAZHENG-3X1 CHAZHEN3X1
+Added Member To Class: ClassName=超声波系统 Member=Component D? LED0
+Added Member To Class: ClassName=超声波系统 Member=Component FM FENGMING
+Added Member To Class: ClassName=超声波系统 Member=Component Q? 2N3904
+Added Member To Class: ClassName=超声波系统 Member=Component R2 10k
+Added Member To Class: ClassName=超声波系统 Member=Component R4 Res Semi
+Added Member To Class: ClassName=超声波系统 Member=Component S000 SW-DPDT
+Added Member To Class: ClassName=超声波系统 Member=Component usb USB-dip
+Added Member To Class: ClassName=超声波系统 Member=Component xtal XTAL
+Added Room: Name=超声波系统

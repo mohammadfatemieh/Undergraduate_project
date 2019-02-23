@@ -1,0 +1,19 @@
+CAM Outputs Generation Report
+for 'CAM Outputs for ³¬Éù²¨.cam'
+at 14:21:14 on 26-Jun-2014
+
+
+'NC Drill Output 1'
+'³¬Éù²¨.TXT' generated
+'³¬Éù²¨.DRL' generated
+'³¬Éù²¨.DRR' generated
+
+'Gerber Output 1'
+'³¬Éù²¨.GBL' generated
+'³¬Éù²¨.GKO' generated
+'³¬Éù²¨.GD1' generated
+'³¬Éù²¨.GG1' generated
+'³¬Éù²¨.REP' generated
+
+
+Total number of generated files = 8

@@ -1,0 +1,14 @@
+Added Component: Designator=SD1(SD_CARD)
+Added Pin To Net: NetName=SD_CS Pin=SD1-1
+Added Pin To Net: NetName=SP1_MOSI Pin=SD1-2
+Added Pin To Net: NetName=GND Pin=SD1-3
+Added Pin To Net: NetName=VCC3.3 Pin=SD1-4
+Added Pin To Net: NetName=SP1_SCK Pin=SD1-5
+Added Pin To Net: NetName=GND Pin=SD1-6
+Added Pin To Net: NetName=SP1_MISO Pin=SD1-7
+Added Member To Class: ClassName=U_刘师STM32 Member=Component SD1 SD_CARD
+Added Room: Name=U_ht7111
+Added Room: Name=U_PL2303
+Added Room: Name=U_刘师STM32
+Added Room: Name=U_电源2
+Added Room: Name=U_电源

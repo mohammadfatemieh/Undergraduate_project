@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=Net*3_2 Pin=D9-1
+Removed Pin From Net: NetName=VIN Pin=D9-2
+Removed Pin From Net: NetName=VIN Pin=D10-1
+Removed Pin From Net: NetName=Netb1_7 Pin=D10-2
+Removed Pin From Net: NetName=Netb1_4 Pin=D12-1
+Removed Pin From Net: NetName=VIN- Pin=D12-2
+Removed Member From Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=D9
+Removed Member From Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=D10
+Removed Member From Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=D12
+Added Component: Designator=D2(res)
+Added Component: Designator=D3(res)
+Added Component: Designator=D3(res)
+Added Pin To Net: NetName=Net*3_2 Pin=D2-1
+Added Pin To Net: NetName=VIN Pin=D2-2
+Added Pin To Net: NetName=Netb1_4 Pin=D3-1
+Added Pin To Net: NetName=VIN Pin=D3-1
+Added Pin To Net: NetName=Netb1_7 Pin=D3-2
+Added Pin To Net: NetName=VIN- Pin=D3-2
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component C1 
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D1 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D2 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component D6 IN4148
+Added Member To Class: ClassName=PVCπ‹ºÏ≤‚Õº Member=Component R10 Res2

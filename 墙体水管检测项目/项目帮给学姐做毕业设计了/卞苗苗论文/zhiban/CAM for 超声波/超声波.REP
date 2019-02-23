@@ -1,0 +1,73 @@
+*************************************************************
+FileName = ³¬Éù²¨.GBR
+AutoAperture = True
+*************************************************************
+Generating : 
+      File : ³¬Éù²¨.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+*************************************************************
+
+*************************************************************
+Generating : 
+      File : ³¬Éù²¨.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D29
+    D30
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : ³¬Éù²¨.GD1
+
+    Adding Layer      : Drill Drawing
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+
+Used DCodes :
+    D29
+    D31
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : ³¬Éù²¨.GG1
+
+    Adding Layer      : Drill Guide
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+
+Used DCodes :
+    D31
+*************************************************************
+

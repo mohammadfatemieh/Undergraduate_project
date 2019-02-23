@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=VCC3.3 Pin=U3-1
+Removed Pin From Net: NetName=GND Pin=U3-2
+Removed Pin From Net: NetName=VCC3.3 Pin=U3-3
+Removed Pin From Net: NetName=VCC5 Pin=U3-4
+Removed Pin From Net: NetName=VCC5 Pin=U4-1
+Removed Pin From Net: NetName=GND Pin=U4-2
+Removed Pin From Net: NetName=VCC5 Pin=U4-3
+Removed Pin From Net: NetName=NetB3_4 Pin=U4-4
+Added Pin To Net: NetName=GND Pin=C32-2
+Added Pin To Net: NetName=GND Pin=C33-1
+Added Pin To Net: NetName=GND Pin=U3-1
+Added Pin To Net: NetName=VCC3.3 Pin=U3-2
+Added Pin To Net: NetName=VCC5 Pin=U3-3
+Added Pin To Net: NetName=GND Pin=U4-1
+Added Pin To Net: NetName=VCC5 Pin=U4-2
+Added Pin To Net: NetName=NetB3_4 Pin=U4-3
+Added Member To Class: ClassName=U_刘师STM32 Member=Component R1 RES-0603
+Added Room: Name=U_ht7111
+Added Room: Name=U_PL2303
+Added Room: Name=U_刘师STM32
+Added Room: Name=U_电源2
+Added Room: Name=U_电源

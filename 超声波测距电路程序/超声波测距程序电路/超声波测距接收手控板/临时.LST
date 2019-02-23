@@ -1,0 +1,317 @@
+C51 COMPILER V9.53.0.0   ____                                                              11/04/2014 19:22:00 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE ____
+OBJECT MODULE PLACED IN 临时.OBJ
+COMPILER INVOKED BY: D:\Program Files\keil for arm\C51\BIN\C51.EXE 临时.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TA
+                    -BS(2)
+
+line level    source
+
+   1          #include<AT89X51.H>
+   2          #include<intrins.h>
+   3          #include<stdio.h>
+   4          #define uchar unsigned char
+   5          #define uint unsigned int
+   6          #define nop _nop_()
+   7          #define LCD_Data P0
+   8          #define Busy    0x80 //用于检测LCD状态字中的Busy标识
+   9          
+  10          
+  11          sbit LCD_RS=P3^5;//定义引脚
+  12          sbit LCD_RW=P3^6;
+  13          sbit LCD_E=P3^4;
+  14          //sbit PSB =P3^7;   
+  15          sbit PSB =P3^1;   //PSB脚为12864-12系列的串、并通讯功能切换，我们使用8位并行接口，PSB=1
+  16          //sbit beef =P2^6;
+  17          /*************************///LCD显示字符函数
+  18          void WriteDataLCD(unsigned char WDLCD);
+  19          void WriteCommandLCD(unsigned char WCLCD,BuysC);
+  20          unsigned char ReadDataLCD(void);
+  21          unsigned char ReadStatusLCD(void);
+  22          void LCDInit(void);
+  23          void LCDClear(void);
+  24          //void LCDFlash(void);
+  25          void DisplayOneChar(unsigned char X, unsigned char Y, unsigned char DData);
+  26          void DisplayListChar(unsigned char X, unsigned char Y, unsigned char *DData);
+  27          //void DisplayImage (unsigned char code *DData);
+  28          void Delay5Ms(void);
+  29          void Delay400Ms(void);
+  30          /*************************/
+  31          /////////////////////////////超声波发射接收子函数体
+  32          uchar k[]={"arch!"};
+  33          void  delay100us(void);
+  34          void delay_nms(uint n);
+  35          
+  36          void display(uint dat);
+  37          /**************************/
+  38          ////////////////////////////////////////////////超声波发射接收全局变量
+  39          unsigned char flag,receive[6],info,ch;
+  40          
+  41          ////////////////超声波接受函数///////////////////////////////
+  42          void serial_init(void)
+  43          {
+  44   1          flag=0;
+  45   1          TMOD=0X20;
+  46   1          TH1=0XFD;
+  47   1          TL1=0XFD;
+  48   1          TR1=1;
+  49   1          
+  50   1          SM0=0;
+  51   1          SM1=1;
+  52   1          REN=1;  
+  53   1          ES=1; 
+  54   1          EA=1;
+C51 COMPILER V9.53.0.0   ____                                                              11/04/2014 19:22:00 PAGE 2   
+
+  55   1          
+  56   1      }
+  57          
+  58          //串口发送时是不需要串口中断参与的，而串口接收数据时则需要串口中断参与；
+  59          
+  60          /////////////////////////////////////////////////主程序函数
+  61          void main(void)
+  62          {
+  63   1          unsigned char i;
+  64   1          LCDInit(); //LCM初始化
+  65   1          serial_init();
+  66   1          flag=0;
+  67   1          while(1)
+  68   1            { 
+  69   2      //        LCDInit(); //LCM初始化
+  70   2              if(info=='A')
+  71   2                  for(i=0;i<6;i++)
+  72   2                    { 
+  73   3                      while(!flag);//flag=0时一直等待；
+  74   3                      flag=0;                 
+  75   3                      DisplayOneChar(i,1,info);
+  76   3      
+  77   3                
+  78   3                    }
+  79   2      //                Delay400Ms();
+  80   2      //                Delay400Ms();   
+  81   2              if(info=='B')
+  82   2                  for(i=0;i<6;i++)
+  83   2                    { 
+  84   3                      while(!flag);//flag=0时一直等待；
+  85   3                      flag=0;                 
+  86   3                      DisplayOneChar(i,2,info);
+  87   3      
+  88   3                
+  89   3                    }
+  90   2      //                Delay400Ms();
+  91   2      //                Delay400Ms();   
+  92   2              if(info=='C')
+  93   2                  for(i=0;i<6;i++)
+  94   2                    { 
+  95   3                      while(!flag);//flag=0时一直等待；
+  96   3                      flag=0;                 
+  97   3                      DisplayOneChar(i,3,info);
+  98   3      
+  99   3                
+ 100   3                    }
+ 101   2      //                Delay400Ms();
+ 102   2      //                Delay400Ms();           
+ 103   2                  
+ 104   2              if(info=='D')
+ 105   2                  for(i=0;i<6;i++)
+ 106   2                    { 
+ 107   3                      while(!flag);//flag=0时一直等待；
+ 108   3                      flag=0;                 
+ 109   3                      DisplayOneChar(i,4,info);
+ 110   3                    }
+ 111   2      //                Delay400Ms();
+ 112   2      //                Delay400Ms();
+ 113   2      //                Delay400Ms();
+ 114   2      //                Delay400Ms();               
+ 115   2      //              
+ 116   2            }
+C51 COMPILER V9.53.0.0   ____                                                              11/04/2014 19:22:00 PAGE 3   
+
+ 117   1        
+ 118   1      }
+ 119          ////////////////////////////////////////////////////
+ 120          void serial() interrupt 4
+ 121          {
+ 122   1        
+ 123   1            RI=0;
+ 124   1            info=SBUF;
+ 125   1            flag=1; 
+ 126   1      }
+ 127          //延时函数体
+ 128          void  delay100us(void)
+ 129          {
+ 130   1          uchar i;
+ 131   1              for(i=0;i<50;i++)
+ 132   1                  ;
+ 133   1      }
+ 134          void delay_nms(uint n)
+ 135          {
+ 136   1      uchar i; 
+ 137   1      while(n--)
+ 138   1      {
+ 139   2      for(i=123;i>0;i--);
+ 140   2      }
+ 141   1      }
+ 142          
+ 143          
+ 144          
+ 145          
+ 146          ////////////////////////////////////////////
+ 147          //1写数据
+ 148          void WriteDataLCD(unsigned char WDLCD)
+ 149          {
+ 150   1       ReadStatusLCD(); //检测忙 
+ 151   1       LCD_RS = 1;
+ 152   1       LCD_RW = 0;
+ 153   1       LCD_Data = WDLCD;
+ 154   1       LCD_E = 1;
+ 155   1       LCD_E = 1;
+ 156   1       LCD_E = 1;
+ 157   1       LCD_E = 0;
+ 158   1      }
+ 159          
+ 160          //2写指令
+ 161          void WriteCommandLCD(unsigned char WCLCD,BuysC) //BuysC为0时忽略忙检测
+ 162          {
+ 163   1       if (BuysC) ReadStatusLCD(); //根据需要检测忙 
+ 164   1       LCD_RS = 0;
+ 165   1       LCD_RW = 0; 
+ 166   1       LCD_Data = WCLCD;
+ 167   1       LCD_E = 1; 
+ 168   1       LCD_E = 1;
+ 169   1       LCD_E = 1;
+ 170   1       LCD_E = 0;  
+ 171   1      }
+ 172          
+ 173          //3读数据
+ 174          unsigned char ReadDataLCD(void)
+ 175          {
+ 176   1       LCD_RS = 1; 
+ 177   1       LCD_RW = 1;
+ 178   1       LCD_E = 0;
+C51 COMPILER V9.53.0.0   ____                                                              11/04/2014 19:22:00 PAGE 4   
+
+ 179   1       LCD_E = 0;
+ 180   1       LCD_E = 1;
+ 181   1       return(LCD_Data);
+ 182   1      }
+ 183          
+ 184          //4读状态
+ 185          unsigned char ReadStatusLCD(void)
+ 186          {
+ 187   1       LCD_Data = 0xFF; 
+ 188   1       LCD_RS = 0;
+ 189   1       LCD_RW = 1; 
+ 190   1       LCD_E = 1;
+ 191   1       while (LCD_Data & Busy); //检测忙信号
+ 192   1       LCD_E = 0;
+ 193   1       return(LCD_Data);
+ 194   1      }
+ 195          
+ 196          void LCDInit(void) //5LCM初始化
+ 197          {
+ 198   1       WriteCommandLCD(0x30,1); //显示模式设置,开始要求每次检测忙信号
+ 199   1       WriteCommandLCD(0x01,1); //显示清屏
+ 200   1       WriteCommandLCD(0x06,1); // 显示光标移动设置
+ 201   1       WriteCommandLCD(0x0C,1); // 显示开及光标设置
+ 202   1      }
+ 203          void LCDClear(void) //6清屏
+ 204          {
+ 205   1       WriteCommandLCD(0x01,1); //显示清屏
+ 206   1       WriteCommandLCD(0x34,1); // 显示光标移动设置
+ 207   1       WriteCommandLCD(0x30,1); // 显示开及光标设置
+ 208   1      }
+ 209          
+ 210          void DisplayOneChar(unsigned char X, unsigned char Y, unsigned char DData)
+ 211          {
+ 212   1       if(Y<1)
+ 213   1        Y=1;
+ 214   1       if(Y>4)
+ 215   1        Y=4;
+ 216   1       X &= 0x0F; //限制X不能大于16，Y不能大于1
+ 217   1       switch(Y){
+ 218   2        case 1:X|=0X80;break;
+ 219   2        case 2:X|=0X90;break;
+ 220   2        case 3:X|=0X88;break;
+ 221   2        case 4:X|=0X98;break;
+ 222   2        }
+ 223   1       WriteCommandLCD(X, 0); //这里不检测忙信号，发送地址码
+ 224   1       WriteDataLCD(DData);
+ 225   1      }
+ 226          
+ 227          //9按指定位置显示一串字符
+ 228          void DisplayListChar(unsigned char X, unsigned char Y, unsigned char *DData)//code *DData
+ 229          {
+ 230   1       unsigned char ListLength,X2;
+ 231   1        ListLength = 0;
+ 232   1        X2=X;
+ 233   1       if(Y<1)
+ 234   1        Y=1;
+ 235   1       if(Y>4)
+ 236   1        Y=4;
+ 237   1       X &= 0x0F; //限制X不能大于16，Y在1-4之内
+ 238   1       switch(Y){
+ 239   2        case 1:X2|=0X80;break;  //根据行数来选择相应地址
+ 240   2        case 2:X2|=0X90;break;
+C51 COMPILER V9.53.0.0   ____                                                              11/04/2014 19:22:00 PAGE 5   
+
+ 241   2        case 3:X2|=0X88;break;
+ 242   2        case 4:X2|=0X98;break;
+ 243   2        }
+ 244   1       WriteCommandLCD(X2, 1); //10发送地址码
+ 245   1        while (DData[ListLength]>=0x20) //若到达字串尾则退出
+ 246   1        {
+ 247   2         if (X <= 0x0F) //X坐标应小于0xF
+ 248   2          {
+ 249   3           WriteDataLCD(DData[ListLength]); //
+ 250   3           ListLength++;
+ 251   3         X++;
+ 252   3         Delay5Ms();
+ 253   3          }
+ 254   2        }
+ 255   1      }
+ 256          //125ms延时
+ 257          void Delay5Ms(void)
+ 258          {
+ 259   1       unsigned int TempCyc = 5552;
+ 260   1       while(TempCyc--);
+ 261   1      }
+ 262          
+ 263          //13400ms延时
+ 264          void Delay400Ms(void)
+ 265          {
+ 266   1       unsigned char TempCycA = 5;
+ 267   1       unsigned int TempCycB;
+ 268   1       while(TempCycA--)
+ 269   1       {
+ 270   2        TempCycB=7269;
+ 271   2        while(TempCycB--);
+ 272   2       };
+ 273   1      }
+ 274          /////////////////////////////////////
+ 275          
+ 276          
+ 277          
+ 278          
+ 279          
+ 280          
+ 281          
+ 282          
+ 283          
+ 284          
+ 285          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    553    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     15       9
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=Net51MCU_19 Pin=CAP2-2
+Removed Pin From Net: NetName=Net51MCU_19 Pin=xtal-2
+Added Pin To Net: NetName=GND Pin=51MCU-20
+Added Pin To Net: NetName=Net51MCU_19 Pin=CAP3-1
+Added Pin To Net: NetName=Net51MCU_19 Pin=xtal-1
+Added Pin To Net: NetName=Net51MCU_18 Pin=51MCU-18
+Added Pin To Net: NetName=Net51MCU_18 Pin=CAP2-2
+Added Pin To Net: NetName=Net51MCU_18 Pin=xtal-2
+Added Net: Name=Net51MCU_18
