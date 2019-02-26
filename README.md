@@ -38,13 +38,13 @@ These project have done during my undergraduate study.  It's only take record fo
 
 [软件代码地址](./墙体水管检测项目/项目帮给学姐做毕业设计了/卞苗苗论文/miaomiao/资料)
 
-## 蓝桥杯2015年嵌入式板子程序和电路
+## 项目三、蓝桥杯2015年嵌入式板子程序和电路
 
 程序流程图:
 
 ![蓝桥杯程序实现流程图](./蓝桥杯2015年嵌入式板子程序电路/流程图.png)
 
-## 超声波项目
+## 项目四、超声波项目
 
 该项目也是帮学长做的毕业设计，实现的功能如下：
 
@@ -60,7 +60,7 @@ These project have done during my undergraduate study.  It's only take record fo
 
 ![超声波的从机PCB图](./超声波测距电路程序/chaoshengbosub.JPG)
 
-## 机器人的舵机控制板设计项目
+## 项目五、机器人的舵机控制板设计项目
 
 * 该项目主要是编写BOOTLOADER代码实现
 * AVR控制板和上位机的串口更新代码
@@ -72,7 +72,7 @@ These project have done during my undergraduate study.  It's only take record fo
 
 ![机器人的舵机控制板](./avr舵机控制/duojikongzhiban.JPG)
 
-## 矿下受力监测项目
+## 项目六、矿下受力监测项目
 
 主要实现功能：
 
@@ -93,6 +93,27 @@ These project have done during my undergraduate study.  It's only take record fo
 ![第二个版本PCB](./项目一刘师的矿下检测设备2015-6-20/dianlu1.JPG)
 
 [硬件地址](./项目一刘师的矿下检测设备2015-6-20/刘师PCB工程/)
+
+项目七、数字仪表都市自动识别系统
+
+![实现效果图](./\仪表数字图像自动识别系统项目/整体效果.JPG)
+
+系统的功能如下图：
+
+![功能框架](./\仪表数字图像自动识别系统项目/系统功能图.png)
+
+数字图像采集来自测量仪表，通过对仪表的视频流周期取图像帧，运用图像识别算法实现实时的数字仪表读数的识别。
+
+<iframe height=498 width=510 src='http://player.youku.com/embed/XMTYxMTE0NTQ0OA==' frameborder=0 'allowfullscreen'></iframe>
+
+效果视屏地址见youku：
+
+[基于IP网络摄像头的数字仪表图像识别](http://player.youku.com/embed/XMTYxMTE0NTQ0OA==)
+
+[数字仪表识别系统](http://player.youku.com/embed/XMTYwNDM1MjQ0MA==)
+
+[更多视屏欢迎订阅我的youku前去查看](http://id.tudou.com/pertor?spm=a2hzp.8244740.0.0)
+
 
 
 当然还有好多的项目，因为这些都是2015年前搞得项目，现在 2019来整理，太多的真的就找不到了，这些都是从我当年 云盘中找的，好多都并没有备份，没了就没了吧
