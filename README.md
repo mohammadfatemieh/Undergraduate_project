@@ -96,15 +96,19 @@ These project have done during my undergraduate study.  It's only take record fo
 
 项目七、数字仪表都市自动识别系统
 
-![实现效果图](./\仪表数字图像自动识别系统项目/整体效果.JPG)
+![实现效果图](./仪表数字图像自动识别系统项目/整体效果.JPG)
 
 系统的功能如下图：
 
-![功能框架](./\仪表数字图像自动识别系统项目/系统功能图.png)
+![功能框架](./仪表数字图像自动识别系统项目/系统功能图.png)
 
 数字图像采集来自测量仪表，通过对仪表的视频流周期取图像帧，运用图像识别算法实现实时的数字仪表读数的识别。
 
-<iframe height=498 width=510 src='http://player.youku.com/embed/XMTYxMTE0NTQ0OA==' frameborder=0 'allowfullscreen'></iframe>
+并且项目也申请软著等
+
+![一表读数自动是被系统软著](./仪表数字图像自动识别系统项目/仪表读数自动识别系统.jpg)
+
+
 
 效果视屏地址见youku：
 
